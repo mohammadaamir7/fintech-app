@@ -1,12 +1,16 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Chart from "./components/Chart";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Offers from "./components/Offers";
 
 function App() {
   return (
-    <div className="App">
-      <Chart />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Chart />} />
+        <Route path="/offers" element={<Offers />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import HighchartsReact from "highcharts-react-official";
 import Highcharts from "highcharts/highstock";
 import {
-  getAccountData,
-  getHashtagTweetCategoryData,
   getLikesData,
-  getMentionTweetCategoryData,
-  getPositiveHashtagUserData,
   getPositiveMentionUserData,
   getReTweetsData,
   getTweetCategoryData,
   getTweetsData,
 } from "../queries";
+import { Col, Container, Row } from "react-bootstrap";
+import "../assets/style.css";
+import Checkbox from "./Checkbox";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { useNavigate } from "react-router";
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -22,28 +25,48 @@ require("highcharts/modules/accessibility")(Highcharts);
 require("highcharts/modules/export-data")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
 
-const Chart = () => {
-  const tweetSeries = getTweetsData("Bank1", "2019");
-  const likeSeries = getLikesData("Bank1", "2019");
-  const retweetSeries = getReTweetsData("Bank1", "2019");
-  const tweetCategirySeries = getTweetCategoryData("Bank1", "2019");
-  const hashtagTweetCategirySeries = getHashtagTweetCategoryData(
-    "Bank1",
-    "2019"
-  );
-  const mentionTweetCategirySeries = getMentionTweetCategoryData(
-    "Bank1",
-    "2019"
-  );
-  const mentionPositiveUserSeries = getPositiveMentionUserData(
-    "Bank1",
-    "2019"
-  );
-  const hashtagPositiveUserSeries = getPositiveHashtagUserData(
-    "Bank1",
-    "2019"
-  );
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
+const Chart = () => {
+  const [filters, setFilters] = useState([]);
+  const [tweetSeries, setTweetSeries] = useState([]);
+  const [likeSeries, setLikeSeries] = useState([]);
+  const [retweetSeries, setRetweetSeries] = useState([]);
+  const [tweetCategirySeries, setTweetCategirySeries] = useState([]);
+  const [mentionPositiveUserSeries, setMentionPositiveUserSeries] = useState(
+    []
+  );
+  const navigate = useNavigate();
+  const accounts = ["Bank", "Fintech"];
+  const sentiments = ["Positive", "Negative", "Neutral/Queries"];
+  const categories = ["Hashtag", "Mentions"];
+  const banks = ["Bank1", "bank2", "Bank3"];
+  const fintechs = ["Fintech4", "Fintech5"];
+
+  useEffect(() => {
+    setTweetSeries(getTweetsData(filters, "2019"));
+    setLikeSeries(getLikesData(filters, "2019"));
+    setRetweetSeries(getReTweetsData(filters, "2019"));
+    setTweetCategirySeries(getTweetCategoryData(filters, "2019"));
+    setMentionPositiveUserSeries(getPositiveMentionUserData(filters, "2019"));
+  }, [filters]);
+
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    console.log("newValue : ", newValue);
+    setValue(newValue);
+    if (newValue == 1) {
+      navigate("/offers");
+    } else if(newValue == 0){
+      navigate("/");
+    }
+  };
 
   const tweetChartOptions = {
     title: {
@@ -52,14 +75,22 @@ const Chart = () => {
     },
 
     yAxis: {
-      gridLineWidth: 0,
       title: {
-        text: "Number of Employees",
+        text: "",
       },
+      gridLineWidth: 0,
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
     },
 
     xAxis: {
-      gridLineWidth: 0,
+      lineColor: "white",
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
       categories: [
         "Jan",
         "Feb",
@@ -120,14 +151,22 @@ const Chart = () => {
     },
 
     yAxis: {
-      gridLineWidth: 0,
       title: {
-        text: "Number of Employees",
+        text: "",
       },
+      gridLineWidth: 0,
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
     },
 
     xAxis: {
-      gridLineWidth: 0,
+      lineColor: "white",
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
       categories: [
         "Jan",
         "Feb",
@@ -188,14 +227,22 @@ const Chart = () => {
     },
 
     yAxis: {
-      gridLineWidth: 0,
       title: {
-        text: "Number of Employees",
+        text: "",
       },
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      gridLineWidth: 0,
     },
 
     xAxis: {
-      gridLineWidth: 0,
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      lineColor: "white",
       categories: [
         "Jan",
         "Feb",
@@ -264,6 +311,11 @@ const Chart = () => {
     },
 
     xAxis: {
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      lineColor: "white",
       categories: [
         "Jan",
         "Feb",
@@ -280,10 +332,14 @@ const Chart = () => {
       ],
     },
     yAxis: {
-      min: 0,
       title: {
-        text: "Goals",
+        text: "",
       },
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      min: 0,
     },
     legend: {
       reversed: true,
@@ -298,114 +354,12 @@ const Chart = () => {
         pointWidth: 15,
         pointPadding: 0.2,
       },
+      bar: {
+        colorByPoint: true, // Enable color per point
+        colors: ['green', 'red', 'grey'] // Define custom colors
+      }
     },
     series: tweetCategirySeries,
-  };
-
-  const hashtagBar = {
-    chart: {
-      type: "column",
-    },
-
-    title: {
-      text: "Hashtags",
-      align: "left",
-    },
-
-    credits: {
-      enabled: false,
-    },
-
-    xAxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: "Goals",
-      },
-    },
-    legend: {
-      reversed: true,
-    },
-    plotOptions: {
-      series: {
-        // stacking: "normal",
-        borderRadius: "25%",
-        dataLabels: {
-          enabled: true,
-        },
-        pointWidth: 15,
-        pointPadding: 0.2,
-      },
-    },
-    series: hashtagTweetCategirySeries,
-  };
-
-  const mentionBar = {
-    chart: {
-      type: "column",
-    },
-
-    title: {
-      text: "Mentions",
-      align: "left",
-    },
-
-    credits: {
-      enabled: false,
-    },
-
-    xAxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: "Goals",
-      },
-    },
-    legend: {
-      reversed: true,
-    },
-    plotOptions: {
-      series: {
-        // stacking: "normal",
-        borderRadius: "25%",
-        dataLabels: {
-          enabled: true,
-        },
-        pointWidth: 15,
-        pointPadding: 0.2,
-      },
-    },
-    series: mentionTweetCategirySeries,
   };
 
   const mentionCategoryBar = {
@@ -414,7 +368,7 @@ const Chart = () => {
     },
 
     title: {
-      text: "Mentions Users",
+      text: "Users",
       align: "left",
     },
 
@@ -423,6 +377,11 @@ const Chart = () => {
     },
 
     xAxis: {
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      lineColor: "white",
       categories: [
         "Jan",
         "Feb",
@@ -439,10 +398,14 @@ const Chart = () => {
       ],
     },
     yAxis: {
-      min: 0,
       title: {
-        text: "Goals",
+        text: "",
       },
+      labels: {
+        enabled: false,
+      },
+      tickLength: 0,
+      min: 0,
     },
     legend: {
       reversed: true,
@@ -450,7 +413,7 @@ const Chart = () => {
     plotOptions: {
       series: {
         stacking: "percent",
-        borderRadius: "25%",
+        borderRadius: "75%",
         dataLabels: {
           enabled: true,
         },
@@ -461,116 +424,102 @@ const Chart = () => {
     series: mentionPositiveUserSeries,
   };
 
-  const hashtagCategoryBar = {
-    chart: {
-      type: "bar",
-    },
-
-    title: {
-      text: "Hashtag Users",
-      align: "left",
-    },
-
-    credits: {
-      enabled: false,
-    },
-
-    xAxis: {
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
-    },
-    yAxis: {
-      min: 0,
-      title: {
-        text: "Goals",
-      },
-    },
-    legend: {
-      reversed: true,
-    },
-    plotOptions: {
-      series: {
-        stacking: "percent",
-        borderRadius: "25%",
-        dataLabels: {
-          enabled: true,
-        },
-        pointWidth: 15,
-        pointPadding: 0.2,
-      },
-    },
-    series: hashtagPositiveUserSeries,
-  };
-
   return (
     <>
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={tweetChartOptions}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={likesChartOptions}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={retweetedChartOptions}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={stackbar}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={hashtagBar}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={mentionBar}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={mentionCategoryBar}
-        updateArgs={[true, true, true]}
-      />
-
-      <HighchartsReact
-        highcharts={Highcharts}
-        constructorType={"chart"}
-        options={hashtagCategoryBar}
-        updateArgs={[true, true, true]}
-      />
+      <Container fluid>
+        <Row>
+          <Col md={2}>
+            <Box sx={{ width: "100%" }}>
+              <Box
+                sx={{ borderBottom: 1, borderColor: "divider" }}
+                justifyContent="center"
+                alignItems="center"
+                display="flex"
+              >
+                <Tabs
+                  value={value}
+                  onChange={handleChange}
+                  aria-label="basic tabs example"
+                >
+                  <Tab label="Tweets" {...a11yProps(0)} />
+                  <Tab label="Offers" {...a11yProps(1)} />
+                </Tabs>
+              </Box>
+            </Box>
+            <Checkbox
+              data={accounts}
+              title={"Classes"}
+              filters={filters}
+              setFilters={setFilters}
+            />
+            <Checkbox
+              data={[...banks, ...fintechs]}
+              title={"Accounts"}
+              filters={filters}
+              setFilters={setFilters}
+            />
+            <Checkbox
+              data={categories}
+              title={"Categories"}
+              filters={filters}
+              setFilters={setFilters}
+            />
+            <Checkbox
+              data={sentiments}
+              title={"Sentiments"}
+              filters={filters}
+              setFilters={setFilters}
+            />
+          </Col>
+          <Col md={10} className="chart-block">
+            <div className="title-head">
+              <h1>Tweets</h1>
+            </div>
+            <Row>
+              <Col md={3} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={tweetChartOptions}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+              <Col md={3} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={likesChartOptions}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+              <Col md={3} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={retweetedChartOptions}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+              <Col md={3} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={mentionCategoryBar}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+              <Col md={12} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={stackbar}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };
