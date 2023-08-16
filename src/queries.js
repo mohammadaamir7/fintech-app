@@ -1,5 +1,7 @@
 const data = require("./data-refactored.js");
 const offerData = require("./offer-data.js");
+const softwareData = require("./software-update-data.js");
+const monthlyData = require("./monthlyData.js");
 
 const filterData = (data, field) => {
   let total = 0;
@@ -7,7 +9,7 @@ const filterData = (data, field) => {
   return total;
 };
 
-const   structureAccounts = (accountNames) => {
+const structureAccounts = (accountNames) => {
   if (accountNames.includes("Bank") && !accountNames.includes("Fintech")) {
     return ["Bank1", "bank2", "Bank3"];
   } else if (
@@ -20,8 +22,14 @@ const   structureAccounts = (accountNames) => {
     accountNames.includes("Bank")
   ) {
     return ["Bank1", "bank2", "Bank3", "Fintech4", "Fintech5"];
-  } else if(accountNames.includes("Bank1") || accountNames.includes("bank2") || accountNames.includes("Bank3") || accountNames.includes("Fintech4") || accountNames.includes("Fintech5")) {
-    return [...accountNames]
+  } else if (
+    accountNames.includes("Bank1") ||
+    accountNames.includes("bank2") ||
+    accountNames.includes("Bank3") ||
+    accountNames.includes("Fintech4") ||
+    accountNames.includes("Fintech5")
+  ) {
+    return [...accountNames];
   } else {
     return ["Bank1", "bank2", "Bank3", "Fintech4", "Fintech5"];
   }
@@ -102,8 +110,12 @@ export const getAccountData = (accountName, year) => {
   return series;
 };
 
-export const getTweetsData = (accountNames, year) => {
+export const getTweetsData = (accountNames, year, month, startDate, endDate) => {
   console.log("account names : ", accountNames);
+  console.log("month : ", month);
+  console.log("startDate : ", startDate);
+  console.log("endDate : ", endDate);
+
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -112,6 +124,8 @@ export const getTweetsData = (accountNames, year) => {
   const hashtags = [];
   const mentions = [];
   const tweeted = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -128,17 +142,55 @@ export const getTweetsData = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+      if (month !== "month" && !startDate === "startDate") {
+        console.log('first if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month
+        ) {
+          return true;
+        }
+      } else if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
+
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
 
   for (let index = 0; index < categories.length; index++) {
     const filteredData = accountData.filter(
@@ -485,8 +537,9 @@ export const getTweetsData = (accountNames, year) => {
         initialValue.includes("Neutral/Queries")))
   ) {
     series.push({
-      name: "Number of Hashtags",
+      name: "Hashtags",
       data: hashtags,
+      color: "#ffffff",
     });
   } else if (
     (!initialValue.includes("Hashtag") && initialValue.includes("Mentions")) ||
@@ -497,8 +550,9 @@ export const getTweetsData = (accountNames, year) => {
         initialValue.includes("Neutral/Queries")))
   ) {
     series.push({
-      name: "Number of Mentions",
+      name: "Mentions",
       data: mentions,
+      color: "#ffffff",
     });
   } else if (
     (initialValue.includes("Hashtag") && initialValue.includes("Mentions")) ||
@@ -509,35 +563,141 @@ export const getTweetsData = (accountNames, year) => {
         initialValue.includes("Neutral/Queries")))
   ) {
     series.push({
-      name: "Number of Hashtags",
+      name: "Hashtags",
       data: hashtags,
+      color: "#ffffff",
     });
 
     series.push({
-      name: "Number of Mentions",
+      name: "Mentions",
       data: mentions,
+      color: "#ffffff",
     });
   } else {
     series.push({
-      name: "Sum of Tweets",
-      data: tweets,
-    });
-
-    series.push({
-      name: "Number of Hashtags",
+      name: "Hashtags",
       data: hashtags,
+      color: "#ffffff",
     });
 
     series.push({
-      name: "Number of Mentions",
+      name: "Mentions",
       data: mentions,
+      color: "#ffffff",
     });
 
     series.push({
-      name: "Number of Tweeted",
+      name: "Tweeted",
       data: tweeted,
+      color: "#ffffff",
     });
   }
+
+  return series;
+};
+
+export const getTweetsAnalysis = (accountNames, year) => {
+  const initialValue = [...accountNames];
+  accountNames = structureAccounts(accountNames);
+
+  const series = [];
+  const tweets = [];
+
+  const categories = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const accountData = data.filter((record) => {
+    for (let index = 0; index < accountNames.length; index++) {
+      if (
+        record.Accounts === accountNames[index] &&
+        record["Years (Date)"] === year
+      ) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  for (let index = 0; index < categories.length; index++) {
+    const filteredData = accountData.filter(
+      (record) => record["Months (Date)"] === categories[index]
+    );
+    if (
+      initialValue.includes("Positive") &&
+      !initialValue.includes("Negative") &&
+      !initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(filterData(filteredData, "Sum of Positive Tweets"));
+    } else if (
+      !initialValue.includes("Positive") &&
+      initialValue.includes("Negative") &&
+      !initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(filterData(filteredData, "Sum of Negative Tweets"));
+    } else if (
+      !initialValue.includes("Positive") &&
+      !initialValue.includes("Negative") &&
+      initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(filterData(filteredData, "Sum of Nuetral Tweets"));
+    } else if (
+      initialValue.includes("Positive") &&
+      !initialValue.includes("Negative") &&
+      initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(
+        filterData(filteredData, "Sum of Positive Tweets") +
+          filterData(filteredData, "Sum of Nuetral Tweets")
+      );
+    } else if (
+      !initialValue.includes("Positive") &&
+      initialValue.includes("Negative") &&
+      initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(
+        filterData(filteredData, "Sum of Negative Tweets") +
+          filterData(filteredData, "Sum of Nuetral Tweets")
+      );
+    } else if (
+      initialValue.includes("Positive") &&
+      initialValue.includes("Negative") &&
+      !initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(
+        filterData(filteredData, "Sum of Positive Tweets") +
+          filterData(filteredData, "Sum of Negative Tweets")
+      );
+    } else if (
+      initialValue.includes("Positive") &&
+      initialValue.includes("Negative") &&
+      initialValue.includes("Neutral/Queries")
+    ) {
+      tweets.push(
+        filterData(filteredData, "Sum of Positive Tweets") +
+          filterData(filteredData, "Sum of Negative Tweets") +
+          filterData(filteredData, "Sum of Nuetral Tweets")
+      );
+    } else {
+      tweets.push(filterData(filteredData, "Sum of Tweets"));
+    }
+  }
+  series.push({
+    name: "Tweets",
+    data: tweets,
+    color: "#ffffff",
+  });
 
   return series;
 };
@@ -998,18 +1158,19 @@ export const getLikesData = (accountNames, year) => {
         likedPosts.push(filterData(filteredData, "Number of Post Liked"));
         likedUsers.push(filterData(filteredData, "Number of User Liked"));
       }
-      
     }
   }
 
   series.push({
     name: "Liked Posts",
     data: likedPosts,
+    color: "#ffffff",
   });
 
   series.push({
-    name: "Number of User Liked Posts",
+    name: "User Liked Posts",
     data: likedUsers,
+    color: "#ffffff",
   });
 
   return series;
@@ -1583,7 +1744,9 @@ export const getReTweetsData = (accountNames, year) => {
         );
       } else {
         retweetedTweets.push(filterData(filteredData, "Number of Retweeted"));
-        retweetedUsers.push(filterData(filteredData, "Number of User Retweeted"));
+        retweetedUsers.push(
+          filterData(filteredData, "Number of User Retweeted")
+        );
       }
     }
   }
@@ -1591,11 +1754,13 @@ export const getReTweetsData = (accountNames, year) => {
   series.push({
     name: "Retweeted tweets",
     data: retweetedTweets,
+    color: "#ffffff",
   });
 
   series.push({
-    name: "Number of User Retweeted",
+    name: "User Retweeted",
     data: retweetedUsers,
+    color: "#ffffff",
   });
 
   return series;
@@ -1683,16 +1848,22 @@ export const getTweetCategoryData = (accountNames, year) => {
   series.push({
     name: "Positive tweets",
     data: positiveTweets,
+    color: "green",
+    borderColor: "green",
   });
 
   series.push({
     name: "Negative tweets",
     data: negativeTweets,
+    color: "red",
+    borderColor: "red",
   });
 
   series.push({
     name: "Neutral/Query tweets",
     data: queryTweets,
+    color: "yellow",
+    borderColor: "yellow",
   });
 
   return series;
@@ -1856,18 +2027,24 @@ export const getPositiveMentionUserData = (accountNames, year) => {
   }
 
   series.push({
-    name: "Positive users",
-    data: positiveTweets,
+    name: "Neutral/Query users",
+    data: queryTweets,
+    color: "yellow",
+    borderColor: "yellow",
   });
 
   series.push({
     name: "Negative users",
     data: negativeTweets,
+    color: "red",
+    borderColor: "red",
   });
 
   series.push({
-    name: "Neutral/Query users",
-    data: queryTweets,
+    name: "Positive users",
+    data: positiveTweets,
+    color: "green",
+    borderColor: "green",
   });
 
   return series;
@@ -1908,16 +2085,17 @@ export const getPositiveHashtagUserData = (accountName, year) => {
   return series;
 };
 
-export const getOffersTweetsData = (accountNames) => {
-  let retweeted = 0
-  let liked = 0
+export const getOffersTweetsData = (accountNames, year) => {
+  let retweeted = 0;
+  let liked = 0;
 
   accountNames = structureAccounts(accountNames);
 
   const accountData = offerData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
       if (
-        record.Accounts === accountNames[index]
+        record.Accounts === accountNames[index] &&
+        record["Years (Date)"] === year
       ) {
         return true;
       }
@@ -1926,12 +2104,12 @@ export const getOffersTweetsData = (accountNames) => {
   });
 
   for (let index = 0; index < accountData.length; index++) {
-    retweeted += accountData[index]["Number of People Retweeted"]
-    liked += accountData[index]["Number of People Liked"]  
+    retweeted += accountData[index]["Number of People Retweeted"];
+    liked += accountData[index]["Number of People Liked"];
   }
-  
-  const retweetPercent = (retweeted / (retweeted + liked)) * 100
-  const likedPercent = ((liked) / (retweeted + liked)) * 100
+
+  const retweetPercent = (retweeted / (retweeted + liked)) * 100;
+  const likedPercent = (liked / (retweeted + liked)) * 100;
 
   const series = [
     ["Retweeted", retweetPercent],
@@ -1941,17 +2119,18 @@ export const getOffersTweetsData = (accountNames) => {
   return series;
 };
 
-export const getOffersSentimentsData = (accountNames) => {
-  let positive = 0
-  let negative = 0
-  let neutral = 0
+export const getOffersSentimentsData = (accountNames, year) => {
+  let positive = 0;
+  let negative = 0;
+  let neutral = 0;
 
   accountNames = structureAccounts(accountNames);
 
   const accountData = offerData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
       if (
-        record.Accounts === accountNames[index]
+        record.Accounts === accountNames[index] &&
+        record["Years (Date)"] === year
       ) {
         return true;
       }
@@ -1960,20 +2139,174 @@ export const getOffersSentimentsData = (accountNames) => {
   });
 
   for (let index = 0; index < accountData.length; index++) {
-    positive += accountData[index]["Number of Positive People"]
-    negative += accountData[index]["Number of Negative People"]
-    neutral += accountData[index]["Number of Neutral People"]
+    positive += accountData[index]["Number of Positive People"];
+    negative += accountData[index]["Number of Negative People"];
+    neutral += accountData[index]["Number of Neutral People"];
   }
-  
-  const positivePercent = (positive / (positive + negative + neutral)) * 100
-  const negativePercent = (negative / (positive + negative + neutral)) * 100
-  const neutralPercent = (neutral / (positive + negative + neutral)) * 100
+
+  const positivePercent = (positive / (positive + negative + neutral)) * 100;
+  const negativePercent = (negative / (positive + negative + neutral)) * 100;
+  const neutralPercent = (neutral / (positive + negative + neutral)) * 100;
 
   const series = [
-    { name: "Positive", y: positivePercent, sliced: true, selected: true },
-    { name: "Negative", y: negativePercent },
-    { name: "Neutral", y: neutralPercent },
+    {
+      name: "Positive",
+      y: positivePercent,
+      sliced: true,
+      selected: true,
+      color: "green",
+      borderColor: "green",
+    },
+    { name: "Negative", y: negativePercent, color: "red", borderColor: "red" },
+    {
+      name: "Neutral",
+      y: neutralPercent,
+      color: "yellow",
+      borderColor: "yellow",
+    },
   ];
 
   return series;
+};
+
+export const getComplaintAnalysisData = (accountNames, year) => {
+  let complaintsData = [];
+
+  accountNames = structureAccounts(accountNames);
+
+  const categories = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+
+  const accountData = data.filter((record) => {
+    for (let index = 0; index < accountNames.length; index++) {
+      if (
+        record.Accounts === accountNames[index] &&
+        record["Years (Date)"] === year
+      ) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  for (let index = 0; index < categories.length; index++) {
+    const filteredData = accountData.filter(
+      (record) => record["Months (Date)"] === categories[index]
+    );
+    complaintsData.push(
+      filterData(filteredData, "Number of Complaints") /
+        (filterData(filteredData, "Negative Users") +
+          filterData(filteredData, "Positive Users") +
+          filterData(filteredData, "Neutral Users"))
+    );
+  }
+
+  return complaintsData;
+};
+
+export const getPredictionsData = (accountNames, year) => {
+  let positive = [];
+  let negative = [];
+  let neutral = [];
+
+  accountNames = structureAccounts(accountNames);
+
+  const accountData = offerData.filter((record) => {
+    for (let index = 0; index < accountNames.length; index++) {
+      if (
+        record.Accounts === accountNames[index] &&
+        record["Years (Date)"] === year
+      ) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  for (let index = 0; index < accountData.length; index++) {
+    positive.push(accountData[index]["Number of Positive Predictions"]);
+    negative.push(accountData[index]["Number of Negative Predictions"]);
+    neutral.push(accountData[index]["Number of Neutral Predictions"]);
+  }
+  
+  const series = [
+    { name: "Positive", data: positive, color: "green", borderColor: "green" },
+    { name: "Negative", data: negative, color: "red", borderColor: "red" },
+    { name: "Neutral", data: neutral, color: "yellow", borderColor: "yellow" },
+  ];
+
+  return series;
+};
+
+export const getSoftwareUpdateData = (accountNames, year) => {
+  const initialValue = [...accountNames];
+
+  let positive = 0;
+  let negative = 0;
+  let neutral = 0;
+
+  const releaseCheck = accountNames.filter((rec) => rec.includes("Release"));
+  if (releaseCheck.length < 1) {
+    accountNames = [
+      "Release-1",
+      "Release-2",
+      "Release-3",
+      "Release-4",
+      "Release-5",
+    ];
+  }
+  const accountData = softwareData.filter((record) => {
+    for (let index = 0; index < accountNames.length; index++) {
+      if (
+        record.Release === accountNames[index] &&
+        record["Years (Date)"] === year
+      ) {
+        return true;
+      }
+    }
+    return false;
+  });
+
+  for (let index = 0; index < accountData.length; index++) {
+    if (
+      initialValue.includes("Hashtag") &&
+      !initialValue.includes("Mentions")
+    ) {
+      positive += accountData[index]["Number of Positive Hashtag Tweets"];
+      negative += accountData[index]["Number of Negative Hashtag Tweets"];
+      neutral += accountData[index]["Number of Neutral Hashtag Tweets"];
+    } else if (
+      !initialValue.includes("Hashtag") &&
+      initialValue.includes("Mentions")
+    ) {
+      positive += accountData[index]["Number of Positive Mention Tweets"];
+      negative += accountData[index]["Number of Negative Mention Tweets"];
+      neutral += accountData[index]["Number of Neutral Mention Tweets"];
+    } else {
+      positive += accountData[index]["Number of Positive Hashtag Tweets"];
+      positive += accountData[index]["Number of Positive Mention Tweets"];
+      negative += accountData[index]["Number of Negative Hashtag Tweets"];
+      negative += accountData[index]["Number of Negative Mention Tweets"];
+      neutral += accountData[index]["Number of Neutral Hashtag Tweets"];
+      neutral += accountData[index]["Number of Neutral Mention Tweets"];
+    }
+  }
+
+  return [
+    { name: "Positive", y: positive },
+    { name: "Negative", y: negative },
+    { name: "Neutral", y: neutral },
+  ];
 };

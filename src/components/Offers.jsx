@@ -6,12 +6,10 @@ import {
   getOffersTweetsData
 } from "../queries";
 import { Col, Container, Row } from "react-bootstrap";
-import "../assets/style.css";
+import "../assets/index.css";
 import Checkbox from "./Checkbox";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { useNavigate } from "react-router";
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -22,37 +20,38 @@ require("highcharts/modules/accessibility")(Highcharts);
 require("highcharts/modules/export-data")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
 
 const Offers = () => {
   const [filters, setFilters] = useState([]);
   const [tweetSeries, setTweetSeries] = useState([]);
   const [likeSeries, setLikeSeries] = useState([]);
+  const [age, setAge] = useState('Account');
+  const [year, setYear] = useState('2019');
 
-  const navigate = useNavigate();
   const accounts = ["Bank", "Fintech"];
   const banks = ["Bank1", "bank2", "Bank3"];
   const fintechs = ["Fintech4", "Fintech5"];
 
   useEffect(() => {
-    setTweetSeries(getOffersTweetsData(filters));
-    setLikeSeries(getOffersSentimentsData(filters));
-  }, [filters]);
+    setTweetSeries(getOffersTweetsData(filters, year));
+    setLikeSeries(getOffersSentimentsData(filters, year));
+  }, [filters, year]);
 
-  const [value, setValue] = useState(1);
+  const years = ["2019", "2020", "2021", "2022", "2023"];
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-    if (newValue == 1) {
-      navigate("/offers");
-    } else if (newValue == 0) {
-      navigate("/");
-    }
+  const handleChange = (e) => {
+    setAge(e.target.value);
+    setFilters((prev) => {
+      prev = prev.filter(
+        (el) =>
+          el.includes("Hashtag") ||
+          el.includes("Mentions") ||
+          el.includes("Positive") ||
+          el.includes("Negative") ||
+          el.includes("Neutral/Queries")
+      );
+      return [...prev, e.target.value]
+    });
   };
 
   const tweetChartOptions = {
@@ -60,12 +59,17 @@ const Offers = () => {
       plotBackgroundColor: null,
       plotBorderWidth: 0,
       plotShadow: false,
+      backgroundColor: "rgba(192, 192, 192, 0.2)",
+      borderRadius: 10,
     },
     title: {
       text: "Likes and Retweets",
       align: "left",
       verticalAlign: "top",
       y: 17,
+      style: {
+        color: "#ffffff"
+      }
     },
     tooltip: {
       pointFormat: "{series.name}: <b>{point.percentage:.1f}%</b>",
@@ -82,7 +86,7 @@ const Offers = () => {
           distance: -50,
           style: {
             fontWeight: "bold",
-            color: "white",
+            color: "#ffffff",
           },
         },
         startAngle: -90,
@@ -91,6 +95,7 @@ const Offers = () => {
         size: "110%",
       },
     },
+    colors: ['#1DA1F2', '#657786'],
     series: [
       {
         type: "pie",
@@ -123,11 +128,16 @@ const Offers = () => {
       plotBackgroundColor: null,
       plotBorderWidth: null,
       plotShadow: false,
-      type: 'pie'
+      type: 'pie',
+      backgroundColor: "rgba(192, 192, 192, 0.2)",
+      borderRadius: 10,
   },
   title: {
       text: 'Sentiments',
-      align: 'left'
+      align: 'left',
+      style: {
+        color: "#ffffff"
+      }
   },
   tooltip: {
       pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -143,7 +153,8 @@ const Offers = () => {
           cursor: 'pointer',
           dataLabels: {
               enabled: true,
-              format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+              format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+              color: "#ffffff",
           }
       }
   },
@@ -175,38 +186,42 @@ const Offers = () => {
     <>
       <Container fluid>
         <Row>
-          <Col md={2}>
-            <Box sx={{ width: "100%" }}>
-              <Box
-                sx={{ borderBottom: 1, borderColor: "divider" }}
-                justifyContent="center"
-                alignItems="center"
-                display="flex"
-              >
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="basic tabs example"
-                >
-                  <Tab label="Tweets" {...a11yProps(0)} />
-                  <Tab label="Offers" {...a11yProps(1)} />
-                </Tabs>
-              </Box>
-            </Box>
+          <Col md={2} className="categories-list">
             <Checkbox
               data={accounts}
               title={"Classes"}
               filters={filters}
               setFilters={setFilters}
             />
-            <Checkbox
-              data={[...banks, ...fintechs]}
-              title={"Accounts"}
-              filters={filters}
-              setFilters={setFilters}
-            />
+            <h1 className="type-title">Accounts</h1>
+            <Select
+              value={age}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
+            >
+              {["Account", ...banks, ...fintechs].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
+            </Select>
+            <h1 className="type-title">Year</h1>
+            <Select
+              value={year}
+              onChange={e => setYear(e.target.value)}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {[...years].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
           </Col>
-          <Col md={10} className="chart-block">
+          <Col md={10} className="chart-block-offers">
             <div className="title-head">
               <h1>Offers</h1>
             </div>

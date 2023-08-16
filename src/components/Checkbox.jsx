@@ -23,7 +23,7 @@ const CheckboxComponent = ({ data, title, filters, setFilters }) => {
       {data.map((account) => {
         return (
           <div className="checkbox-margin">
-            <Checkbox value={account} onChange={handleChange} />
+            <Checkbox value={account} onChange={handleChange} checked={filters.includes(account)}/>
             <p className="para-margin">{account}</p>
           </div>
         );

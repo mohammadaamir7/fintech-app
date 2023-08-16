@@ -1,0 +1,111 @@
+@font-face {
+  font-family: K2D;
+  src: url("./fonts/K2D/K2D-Medium.ttf");
+}
+@font-face {
+  font-family: Play;
+  src: url("./fonts/Play/Play-Bold.ttf");
+}
+@font-face {
+  font-family: Poppins;
+  src: url("./fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Normal;
+  src: url("./fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: Questrial;
+  src: url("./fonts/Questrial/Questrial-Regular.ttf");
+}
+@font-face {
+  font-family: Playfair;
+  src: url("./fonts/Playfair/static/PlayfairDisplay-Bold.ttf");
+}
+@font-face {
+  font-family: Playfair-Normal;
+  src: url("./fonts/Playfair/static/PlayfairDisplay-Regular.ttf");
+}
+
+.checkbox-margin {
+  display: flex;
+  margin: -10px 20px;
+}
+
+.checkbox-margin:last-child {
+  margin-bottom: 20px;
+}
+
+.para-margin {
+  padding-top: 17px;
+  font-family: Questrial;
+  color: #fff;
+}
+
+.type-title {
+  margin-left: 17px;
+  font-size: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: Poppins;
+  color: #fff;
+}
+
+.type-title:first-child {
+  margin-top: 80px;
+}
+
+.chart-block {
+  background-color: #0d4e5e;
+  height: 100%;
+  margin-left: 0px;
+  backdrop-filter: blur(10px);
+  height: auto;
+}
+
+.chart-block-offers {
+  background-color: #0d4e5e;
+  height: 100vh;
+  margin-left: 0px;
+  backdrop-filter: blur(10px);
+}
+
+.chart-column {
+  margin: 13px -5px;
+}
+
+.width-adjust{
+  width: 82vw !important;
+}
+
+.title-head {
+  background-color: rgba(192, 192, 192, 0.2);
+  margin: 70px -5px 0;
+  height: auto;
+  width: 81.5vw;
+}
+
+.title-head h1 {
+  text-align: center;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 35px;
+  padding: 10px 0;
+}
+
+.categories-list {
+  background-color: #29453e;
+}
+
+.nav-style {
+  opacity: 1;
+  background-color: #000000 !important;
+}
+
+.navbar-tabs {
+  color: #ebe53f !important;
+  font-weight: bold;
+  font-family: Play;
+  font-size: 20px !important;
+  margin: 0 10px;
+}

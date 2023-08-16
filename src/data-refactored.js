@@ -80,7 +80,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3033,
     "Number of Negative Mentions User Retweeted": 1798,
     "Number of Neutral Mentions Retweeted": 1126,
-    "Number of Neutral Mentions User Retweeted": 4437
+    "Number of Neutral Mentions User Retweeted": 4437,
+    "Number of Complaints": 3377
   },
   {
     "Accounts": "Bank1",
@@ -163,7 +164,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4356,
     "Number of Negative Mentions User Retweeted": 2075,
     "Number of Neutral Mentions Retweeted": 3494,
-    "Number of Neutral Mentions User Retweeted": 1853
+    "Number of Neutral Mentions User Retweeted": 1853,
+    "Number of Complaints": 6584
   },
   {
     "Accounts": "Bank1",
@@ -246,7 +248,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4105,
     "Number of Negative Mentions User Retweeted": 2339,
     "Number of Neutral Mentions Retweeted": 3309,
-    "Number of Neutral Mentions User Retweeted": 1048
+    "Number of Neutral Mentions User Retweeted": 1048,
+    "Number of Complaints": 4502
   },
   {
     "Accounts": "Bank1",
@@ -329,7 +332,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4776,
     "Number of Negative Mentions User Retweeted": 4611,
     "Number of Neutral Mentions Retweeted": 2480,
-    "Number of Neutral Mentions User Retweeted": 2231
+    "Number of Neutral Mentions User Retweeted": 2231,
+    "Number of Complaints": 5924
   },
   {
     "Accounts": "Bank1",
@@ -412,7 +416,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1101,
     "Number of Negative Mentions User Retweeted": 1814,
     "Number of Neutral Mentions Retweeted": 3750,
-    "Number of Neutral Mentions User Retweeted": 3928
+    "Number of Neutral Mentions User Retweeted": 3928,
+    "Number of Complaints": 6190
   },
   {
     "Accounts": "Bank1",
@@ -495,7 +500,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4255,
     "Number of Negative Mentions User Retweeted": 1899,
     "Number of Neutral Mentions Retweeted": 2307,
-    "Number of Neutral Mentions User Retweeted": 4525
+    "Number of Neutral Mentions User Retweeted": 4525,
+    "Number of Complaints": 8338
   },
   {
     "Accounts": "Bank1",
@@ -578,7 +584,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1081,
     "Number of Negative Mentions User Retweeted": 2641,
     "Number of Neutral Mentions Retweeted": 4681,
-    "Number of Neutral Mentions User Retweeted": 4512
+    "Number of Neutral Mentions User Retweeted": 4512,
+    "Number of Complaints": 3377
   },
   {
     "Accounts": "Bank1",
@@ -661,7 +668,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4399,
     "Number of Negative Mentions User Retweeted": 1679,
     "Number of Neutral Mentions Retweeted": 1713,
-    "Number of Neutral Mentions User Retweeted": 1885
+    "Number of Neutral Mentions User Retweeted": 1885,
+    "Number of Complaints": 4448
   },
   {
     "Accounts": "Bank1",
@@ -744,7 +752,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3775,
     "Number of Negative Mentions User Retweeted": 2570,
     "Number of Neutral Mentions Retweeted": 1132,
-    "Number of Neutral Mentions User Retweeted": 4771
+    "Number of Neutral Mentions User Retweeted": 4771,
+    "Number of Complaints": 7841
   },
   {
     "Accounts": "Bank1",
@@ -827,7 +836,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3574,
     "Number of Negative Mentions User Retweeted": 4863,
     "Number of Neutral Mentions Retweeted": 1988,
-    "Number of Neutral Mentions User Retweeted": 1349
+    "Number of Neutral Mentions User Retweeted": 1349,
+    "Number of Complaints": 8254
   },
   {
     "Accounts": "Bank1",
@@ -910,7 +920,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4182,
     "Number of Negative Mentions User Retweeted": 3538,
     "Number of Neutral Mentions Retweeted": 4535,
-    "Number of Neutral Mentions User Retweeted": 1215
+    "Number of Neutral Mentions User Retweeted": 1215,
+    "Number of Complaints": 4155
   },
   {
     "Accounts": "Bank1",
@@ -993,7 +1004,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4073,
     "Number of Negative Mentions User Retweeted": 4638,
     "Number of Neutral Mentions Retweeted": 3875,
-    "Number of Neutral Mentions User Retweeted": 4721
+    "Number of Neutral Mentions User Retweeted": 4721,
+    "Number of Complaints": 8342
   },
   {
     "Accounts": "Bank1",
@@ -1076,7 +1088,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2322,
     "Number of Negative Mentions User Retweeted": 2424,
     "Number of Neutral Mentions Retweeted": 3281,
-    "Number of Neutral Mentions User Retweeted": 1106
+    "Number of Neutral Mentions User Retweeted": 1106,
+    "Number of Complaints": 6109
   },
   {
     "Accounts": "Bank1",
@@ -1159,7 +1172,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3556,
     "Number of Negative Mentions User Retweeted": 3659,
     "Number of Neutral Mentions Retweeted": 1993,
-    "Number of Neutral Mentions User Retweeted": 4003
+    "Number of Neutral Mentions User Retweeted": 4003,
+    "Number of Complaints": 5435
   },
   {
     "Accounts": "Bank1",
@@ -1242,7 +1256,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4414,
     "Number of Negative Mentions User Retweeted": 3440,
     "Number of Neutral Mentions Retweeted": 1729,
-    "Number of Neutral Mentions User Retweeted": 3246
+    "Number of Neutral Mentions User Retweeted": 3246,
+    "Number of Complaints": 3460
   },
   {
     "Accounts": "Bank1",
@@ -1325,7 +1340,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2849,
     "Number of Negative Mentions User Retweeted": 1267,
     "Number of Neutral Mentions Retweeted": 1801,
-    "Number of Neutral Mentions User Retweeted": 4549
+    "Number of Neutral Mentions User Retweeted": 4549,
+    "Number of Complaints": 5266
   },
   {
     "Accounts": "Bank1",
@@ -1408,7 +1424,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4826,
     "Number of Negative Mentions User Retweeted": 4599,
     "Number of Neutral Mentions Retweeted": 1289,
-    "Number of Neutral Mentions User Retweeted": 4823
+    "Number of Neutral Mentions User Retweeted": 4823,
+    "Number of Complaints": 4320
   },
   {
     "Accounts": "Bank1",
@@ -1491,7 +1508,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2477,
     "Number of Negative Mentions User Retweeted": 1270,
     "Number of Neutral Mentions Retweeted": 4292,
-    "Number of Neutral Mentions User Retweeted": 3436
+    "Number of Neutral Mentions User Retweeted": 3436,
+    "Number of Complaints": 5215
   },
   {
     "Accounts": "Bank1",
@@ -1574,7 +1592,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1519,
     "Number of Negative Mentions User Retweeted": 2643,
     "Number of Neutral Mentions Retweeted": 2676,
-    "Number of Neutral Mentions User Retweeted": 4598
+    "Number of Neutral Mentions User Retweeted": 4598,
+    "Number of Complaints": 3032
   },
   {
     "Accounts": "Bank1",
@@ -1657,7 +1676,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2779,
     "Number of Negative Mentions User Retweeted": 4517,
     "Number of Neutral Mentions Retweeted": 1163,
-    "Number of Neutral Mentions User Retweeted": 2670
+    "Number of Neutral Mentions User Retweeted": 2670,
+    "Number of Complaints": 4659
   },
   {
     "Accounts": "Bank1",
@@ -1740,7 +1760,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3855,
     "Number of Negative Mentions User Retweeted": 3925,
     "Number of Neutral Mentions Retweeted": 2137,
-    "Number of Neutral Mentions User Retweeted": 1843
+    "Number of Neutral Mentions User Retweeted": 1843,
+    "Number of Complaints": 7847
   },
   {
     "Accounts": "Bank1",
@@ -1823,7 +1844,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1834,
     "Number of Negative Mentions User Retweeted": 3584,
     "Number of Neutral Mentions Retweeted": 3906,
-    "Number of Neutral Mentions User Retweeted": 4595
+    "Number of Neutral Mentions User Retweeted": 4595,
+    "Number of Complaints": 8500
   },
   {
     "Accounts": "Bank1",
@@ -1906,7 +1928,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4755,
     "Number of Negative Mentions User Retweeted": 1122,
     "Number of Neutral Mentions Retweeted": 2955,
-    "Number of Neutral Mentions User Retweeted": 4634
+    "Number of Neutral Mentions User Retweeted": 4634,
+    "Number of Complaints": 5476
   },
   {
     "Accounts": "Bank1",
@@ -1989,7 +2012,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3859,
     "Number of Negative Mentions User Retweeted": 1450,
     "Number of Neutral Mentions Retweeted": 1994,
-    "Number of Neutral Mentions User Retweeted": 2234
+    "Number of Neutral Mentions User Retweeted": 2234,
+    "Number of Complaints": 5290
   },
   {
     "Accounts": "Bank1",
@@ -2072,7 +2096,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4797,
     "Number of Negative Mentions User Retweeted": 3213,
     "Number of Neutral Mentions Retweeted": 4131,
-    "Number of Neutral Mentions User Retweeted": 4986
+    "Number of Neutral Mentions User Retweeted": 4986,
+    "Number of Complaints": 4098
   },
   {
     "Accounts": "Bank1",
@@ -2155,7 +2180,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1681,
     "Number of Negative Mentions User Retweeted": 1870,
     "Number of Neutral Mentions Retweeted": 3252,
-    "Number of Neutral Mentions User Retweeted": 1413
+    "Number of Neutral Mentions User Retweeted": 1413,
+    "Number of Complaints": 9255
   },
   {
     "Accounts": "Bank1",
@@ -2238,7 +2264,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4732,
     "Number of Negative Mentions User Retweeted": 1472,
     "Number of Neutral Mentions Retweeted": 2782,
-    "Number of Neutral Mentions User Retweeted": 1045
+    "Number of Neutral Mentions User Retweeted": 1045,
+    "Number of Complaints": 3667
   },
   {
     "Accounts": "Bank1",
@@ -2321,7 +2348,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1266,
     "Number of Negative Mentions User Retweeted": 3760,
     "Number of Neutral Mentions Retweeted": 1081,
-    "Number of Neutral Mentions User Retweeted": 3825
+    "Number of Neutral Mentions User Retweeted": 3825,
+    "Number of Complaints": 3285
   },
   {
     "Accounts": "Bank1",
@@ -2404,7 +2432,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2489,
     "Number of Negative Mentions User Retweeted": 4438,
     "Number of Neutral Mentions Retweeted": 2637,
-    "Number of Neutral Mentions User Retweeted": 4420
+    "Number of Neutral Mentions User Retweeted": 4420,
+    "Number of Complaints": 5913
   },
   {
     "Accounts": "Bank1",
@@ -2487,7 +2516,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3828,
     "Number of Negative Mentions User Retweeted": 1194,
     "Number of Neutral Mentions Retweeted": 3213,
-    "Number of Neutral Mentions User Retweeted": 4335
+    "Number of Neutral Mentions User Retweeted": 4335,
+    "Number of Complaints": 8336
   },
   {
     "Accounts": "Bank1",
@@ -2570,7 +2600,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3076,
     "Number of Negative Mentions User Retweeted": 2719,
     "Number of Neutral Mentions Retweeted": 1129,
-    "Number of Neutral Mentions User Retweeted": 1803
+    "Number of Neutral Mentions User Retweeted": 1803,
+    "Number of Complaints": 2676
   },
   {
     "Accounts": "Bank1",
@@ -2653,7 +2684,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3134,
     "Number of Negative Mentions User Retweeted": 4897,
     "Number of Neutral Mentions Retweeted": 2966,
-    "Number of Neutral Mentions User Retweeted": 2112
+    "Number of Neutral Mentions User Retweeted": 2112,
+    "Number of Complaints": 8373
   },
   {
     "Accounts": "Bank1",
@@ -2736,7 +2768,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4147,
     "Number of Negative Mentions User Retweeted": 4030,
     "Number of Neutral Mentions Retweeted": 1929,
-    "Number of Neutral Mentions User Retweeted": 2000
+    "Number of Neutral Mentions User Retweeted": 2000,
+    "Number of Complaints": 5003
   },
   {
     "Accounts": "Bank1",
@@ -2819,7 +2852,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4543,
     "Number of Negative Mentions User Retweeted": 4850,
     "Number of Neutral Mentions Retweeted": 2410,
-    "Number of Neutral Mentions User Retweeted": 4710
+    "Number of Neutral Mentions User Retweeted": 4710,
+    "Number of Complaints": 3643
   },
   {
     "Accounts": "Bank1",
@@ -2902,7 +2936,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1845,
     "Number of Negative Mentions User Retweeted": 3817,
     "Number of Neutral Mentions Retweeted": 2657,
-    "Number of Neutral Mentions User Retweeted": 2961
+    "Number of Neutral Mentions User Retweeted": 2961,
+    "Number of Complaints": 4817
   },
   {
     "Accounts": "Bank1",
@@ -2985,7 +3020,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3045,
     "Number of Negative Mentions User Retweeted": 3750,
     "Number of Neutral Mentions Retweeted": 3564,
-    "Number of Neutral Mentions User Retweeted": 2753
+    "Number of Neutral Mentions User Retweeted": 2753,
+    "Number of Complaints": 5069
   },
   {
     "Accounts": "Bank1",
@@ -3068,7 +3104,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3910,
     "Number of Negative Mentions User Retweeted": 3528,
     "Number of Neutral Mentions Retweeted": 4973,
-    "Number of Neutral Mentions User Retweeted": 4475
+    "Number of Neutral Mentions User Retweeted": 4475,
+    "Number of Complaints": 7955
   },
   {
     "Accounts": "Bank1",
@@ -3151,7 +3188,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2301,
     "Number of Negative Mentions User Retweeted": 4240,
     "Number of Neutral Mentions Retweeted": 1136,
-    "Number of Neutral Mentions User Retweeted": 2261
+    "Number of Neutral Mentions User Retweeted": 2261,
+    "Number of Complaints": 3923
   },
   {
     "Accounts": "Bank1",
@@ -3234,7 +3272,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3230,
     "Number of Negative Mentions User Retweeted": 2428,
     "Number of Neutral Mentions Retweeted": 4404,
-    "Number of Neutral Mentions User Retweeted": 3140
+    "Number of Neutral Mentions User Retweeted": 3140,
+    "Number of Complaints": 3890
   },
   {
     "Accounts": "Bank1",
@@ -3317,7 +3356,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2504,
     "Number of Negative Mentions User Retweeted": 4581,
     "Number of Neutral Mentions Retweeted": 1950,
-    "Number of Neutral Mentions User Retweeted": 2940
+    "Number of Neutral Mentions User Retweeted": 2940,
+    "Number of Complaints": 6585
   },
   {
     "Accounts": "Bank1",
@@ -3400,7 +3440,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1614,
     "Number of Negative Mentions User Retweeted": 4166,
     "Number of Neutral Mentions Retweeted": 2888,
-    "Number of Neutral Mentions User Retweeted": 2630
+    "Number of Neutral Mentions User Retweeted": 2630,
+    "Number of Complaints": 5896
   },
   {
     "Accounts": "Bank1",
@@ -3483,7 +3524,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4080,
     "Number of Negative Mentions User Retweeted": 1904,
     "Number of Neutral Mentions Retweeted": 3744,
-    "Number of Neutral Mentions User Retweeted": 1139
+    "Number of Neutral Mentions User Retweeted": 1139,
+    "Number of Complaints": 9829
   },
   {
     "Accounts": "Bank1",
@@ -3566,7 +3608,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2260,
     "Number of Negative Mentions User Retweeted": 3533,
     "Number of Neutral Mentions Retweeted": 3863,
-    "Number of Neutral Mentions User Retweeted": 4218
+    "Number of Neutral Mentions User Retweeted": 4218,
+    "Number of Complaints": 2340
   },
   {
     "Accounts": "Bank1",
@@ -3649,7 +3692,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3093,
     "Number of Negative Mentions User Retweeted": 4101,
     "Number of Neutral Mentions Retweeted": 1085,
-    "Number of Neutral Mentions User Retweeted": 1469
+    "Number of Neutral Mentions User Retweeted": 1469,
+    "Number of Complaints": 4932
   },
   {
     "Accounts": "Bank1",
@@ -3732,7 +3776,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4540,
     "Number of Negative Mentions User Retweeted": 1054,
     "Number of Neutral Mentions Retweeted": 3255,
-    "Number of Neutral Mentions User Retweeted": 1550
+    "Number of Neutral Mentions User Retweeted": 1550,
+    "Number of Complaints": 7508
   },
   {
     "Accounts": "Bank1",
@@ -3815,7 +3860,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3723,
     "Number of Negative Mentions User Retweeted": 3986,
     "Number of Neutral Mentions Retweeted": 4873,
-    "Number of Neutral Mentions User Retweeted": 4645
+    "Number of Neutral Mentions User Retweeted": 4645,
+    "Number of Complaints": 9821
   },
   {
     "Accounts": "Bank1",
@@ -3898,7 +3944,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4843,
     "Number of Negative Mentions User Retweeted": 4463,
     "Number of Neutral Mentions Retweeted": 2532,
-    "Number of Neutral Mentions User Retweeted": 3714
+    "Number of Neutral Mentions User Retweeted": 3714,
+    "Number of Complaints": 8539
   },
   {
     "Accounts": "Bank1",
@@ -3981,7 +4028,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4700,
     "Number of Negative Mentions User Retweeted": 3795,
     "Number of Neutral Mentions Retweeted": 1597,
-    "Number of Neutral Mentions User Retweeted": 2498
+    "Number of Neutral Mentions User Retweeted": 2498,
+    "Number of Complaints": 7807
   },
   {
     "Accounts": "Bank1",
@@ -4064,7 +4112,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4453,
     "Number of Negative Mentions User Retweeted": 2181,
     "Number of Neutral Mentions Retweeted": 3484,
-    "Number of Neutral Mentions User Retweeted": 1165
+    "Number of Neutral Mentions User Retweeted": 1165,
+    "Number of Complaints": 7569
   },
   {
     "Accounts": "Bank1",
@@ -4147,7 +4196,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4206,
     "Number of Negative Mentions User Retweeted": 3325,
     "Number of Neutral Mentions Retweeted": 2134,
-    "Number of Neutral Mentions User Retweeted": 3706
+    "Number of Neutral Mentions User Retweeted": 3706,
+    "Number of Complaints": 5791
   },
   {
     "Accounts": "Bank1",
@@ -4230,7 +4280,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1842,
     "Number of Negative Mentions User Retweeted": 3429,
     "Number of Neutral Mentions Retweeted": 4118,
-    "Number of Neutral Mentions User Retweeted": 1235
+    "Number of Neutral Mentions User Retweeted": 1235,
+    "Number of Complaints": 5721
   },
   {
     "Accounts": "Bank1",
@@ -4313,7 +4364,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3059,
     "Number of Negative Mentions User Retweeted": 2780,
     "Number of Neutral Mentions Retweeted": 2442,
-    "Number of Neutral Mentions User Retweeted": 4532
+    "Number of Neutral Mentions User Retweeted": 4532,
+    "Number of Complaints": 3644
   },
   {
     "Accounts": "bank2",
@@ -4396,7 +4448,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4362,
     "Number of Negative Mentions User Retweeted": 4112,
     "Number of Neutral Mentions Retweeted": 1556,
-    "Number of Neutral Mentions User Retweeted": 1384
+    "Number of Neutral Mentions User Retweeted": 1384,
+    "Number of Complaints": 7226
   },
   {
     "Accounts": "bank2",
@@ -4479,7 +4532,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2551,
     "Number of Negative Mentions User Retweeted": 2807,
     "Number of Neutral Mentions Retweeted": 3223,
-    "Number of Neutral Mentions User Retweeted": 4246
+    "Number of Neutral Mentions User Retweeted": 4246,
+    "Number of Complaints": 3433
   },
   {
     "Accounts": "bank2",
@@ -4562,7 +4616,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2785,
     "Number of Negative Mentions User Retweeted": 2596,
     "Number of Neutral Mentions Retweeted": 3642,
-    "Number of Neutral Mentions User Retweeted": 2074
+    "Number of Neutral Mentions User Retweeted": 2074,
+    "Number of Complaints": 5138
   },
   {
     "Accounts": "bank2",
@@ -4645,7 +4700,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3803,
     "Number of Negative Mentions User Retweeted": 3389,
     "Number of Neutral Mentions Retweeted": 4682,
-    "Number of Neutral Mentions User Retweeted": 1280
+    "Number of Neutral Mentions User Retweeted": 1280,
+    "Number of Complaints": 4906
   },
   {
     "Accounts": "bank2",
@@ -4728,7 +4784,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1748,
     "Number of Negative Mentions User Retweeted": 2207,
     "Number of Neutral Mentions Retweeted": 3896,
-    "Number of Neutral Mentions User Retweeted": 1946
+    "Number of Neutral Mentions User Retweeted": 1946,
+    "Number of Complaints": 8513
   },
   {
     "Accounts": "bank2",
@@ -4811,7 +4868,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4111,
     "Number of Negative Mentions User Retweeted": 2278,
     "Number of Neutral Mentions Retweeted": 4579,
-    "Number of Neutral Mentions User Retweeted": 4783
+    "Number of Neutral Mentions User Retweeted": 4783,
+    "Number of Complaints": 3548
   },
   {
     "Accounts": "bank2",
@@ -4894,7 +4952,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3259,
     "Number of Negative Mentions User Retweeted": 1898,
     "Number of Neutral Mentions Retweeted": 1919,
-    "Number of Neutral Mentions User Retweeted": 4174
+    "Number of Neutral Mentions User Retweeted": 4174,
+    "Number of Complaints": 8442
   },
   {
     "Accounts": "bank2",
@@ -4977,7 +5036,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3800,
     "Number of Negative Mentions User Retweeted": 4614,
     "Number of Neutral Mentions Retweeted": 3580,
-    "Number of Neutral Mentions User Retweeted": 1191
+    "Number of Neutral Mentions User Retweeted": 1191,
+    "Number of Complaints": 3333
   },
   {
     "Accounts": "bank2",
@@ -5060,7 +5120,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2932,
     "Number of Negative Mentions User Retweeted": 3544,
     "Number of Neutral Mentions Retweeted": 3765,
-    "Number of Neutral Mentions User Retweeted": 2819
+    "Number of Neutral Mentions User Retweeted": 2819,
+    "Number of Complaints": 3712
   },
   {
     "Accounts": "bank2",
@@ -5143,7 +5204,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3053,
     "Number of Negative Mentions User Retweeted": 2729,
     "Number of Neutral Mentions Retweeted": 1309,
-    "Number of Neutral Mentions User Retweeted": 4510
+    "Number of Neutral Mentions User Retweeted": 4510,
+    "Number of Complaints": 7188
   },
   {
     "Accounts": "bank2",
@@ -5226,7 +5288,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4266,
     "Number of Negative Mentions User Retweeted": 2805,
     "Number of Neutral Mentions Retweeted": 2421,
-    "Number of Neutral Mentions User Retweeted": 1429
+    "Number of Neutral Mentions User Retweeted": 1429,
+    "Number of Complaints": 7918
   },
   {
     "Accounts": "bank2",
@@ -5309,7 +5372,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4347,
     "Number of Negative Mentions User Retweeted": 2225,
     "Number of Neutral Mentions Retweeted": 2108,
-    "Number of Neutral Mentions User Retweeted": 2164
+    "Number of Neutral Mentions User Retweeted": 2164,
+    "Number of Complaints": 6880
   },
   {
     "Accounts": "bank2",
@@ -5392,7 +5456,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3532,
     "Number of Negative Mentions User Retweeted": 4084,
     "Number of Neutral Mentions Retweeted": 3310,
-    "Number of Neutral Mentions User Retweeted": 2784
+    "Number of Neutral Mentions User Retweeted": 2784,
+    "Number of Complaints": 5150
   },
   {
     "Accounts": "bank2",
@@ -5475,7 +5540,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2441,
     "Number of Negative Mentions User Retweeted": 1064,
     "Number of Neutral Mentions Retweeted": 4743,
-    "Number of Neutral Mentions User Retweeted": 3135
+    "Number of Neutral Mentions User Retweeted": 3135,
+    "Number of Complaints": 5809
   },
   {
     "Accounts": "bank2",
@@ -5558,7 +5624,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4552,
     "Number of Negative Mentions User Retweeted": 2834,
     "Number of Neutral Mentions Retweeted": 2697,
-    "Number of Neutral Mentions User Retweeted": 1708
+    "Number of Neutral Mentions User Retweeted": 1708,
+    "Number of Complaints": 9065
   },
   {
     "Accounts": "bank2",
@@ -5641,7 +5708,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3598,
     "Number of Negative Mentions User Retweeted": 1391,
     "Number of Neutral Mentions Retweeted": 1832,
-    "Number of Neutral Mentions User Retweeted": 3943
+    "Number of Neutral Mentions User Retweeted": 3943,
+    "Number of Complaints": 8564
   },
   {
     "Accounts": "bank2",
@@ -5724,7 +5792,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3056,
     "Number of Negative Mentions User Retweeted": 4723,
     "Number of Neutral Mentions Retweeted": 2424,
-    "Number of Neutral Mentions User Retweeted": 3189
+    "Number of Neutral Mentions User Retweeted": 3189,
+    "Number of Complaints": 4461
   },
   {
     "Accounts": "bank2",
@@ -5807,7 +5876,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1300,
     "Number of Negative Mentions User Retweeted": 1773,
     "Number of Neutral Mentions Retweeted": 3214,
-    "Number of Neutral Mentions User Retweeted": 4882
+    "Number of Neutral Mentions User Retweeted": 4882,
+    "Number of Complaints": 4676
   },
   {
     "Accounts": "bank2",
@@ -5890,7 +5960,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2119,
     "Number of Negative Mentions User Retweeted": 2176,
     "Number of Neutral Mentions Retweeted": 4316,
-    "Number of Neutral Mentions User Retweeted": 2162
+    "Number of Neutral Mentions User Retweeted": 2162,
+    "Number of Complaints": 6427
   },
   {
     "Accounts": "bank2",
@@ -5973,7 +6044,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4813,
     "Number of Negative Mentions User Retweeted": 3906,
     "Number of Neutral Mentions Retweeted": 4099,
-    "Number of Neutral Mentions User Retweeted": 3009
+    "Number of Neutral Mentions User Retweeted": 3009,
+    "Number of Complaints": 8257
   },
   {
     "Accounts": "bank2",
@@ -6056,7 +6128,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2628,
     "Number of Negative Mentions User Retweeted": 2393,
     "Number of Neutral Mentions Retweeted": 3424,
-    "Number of Neutral Mentions User Retweeted": 1955
+    "Number of Neutral Mentions User Retweeted": 1955,
+    "Number of Complaints": 5858
   },
   {
     "Accounts": "bank2",
@@ -6139,7 +6212,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4054,
     "Number of Negative Mentions User Retweeted": 2044,
     "Number of Neutral Mentions Retweeted": 4806,
-    "Number of Neutral Mentions User Retweeted": 4945
+    "Number of Neutral Mentions User Retweeted": 4945,
+    "Number of Complaints": 9365
   },
   {
     "Accounts": "bank2",
@@ -6222,7 +6296,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1507,
     "Number of Negative Mentions User Retweeted": 2682,
     "Number of Neutral Mentions Retweeted": 3750,
-    "Number of Neutral Mentions User Retweeted": 3278
+    "Number of Neutral Mentions User Retweeted": 3278,
+    "Number of Complaints": 6304
   },
   {
     "Accounts": "bank2",
@@ -6305,7 +6380,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4289,
     "Number of Negative Mentions User Retweeted": 4913,
     "Number of Neutral Mentions Retweeted": 2211,
-    "Number of Neutral Mentions User Retweeted": 1316
+    "Number of Neutral Mentions User Retweeted": 1316,
+    "Number of Complaints": 6196
   },
   {
     "Accounts": "bank2",
@@ -6388,7 +6464,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2402,
     "Number of Negative Mentions User Retweeted": 1063,
     "Number of Neutral Mentions Retweeted": 2498,
-    "Number of Neutral Mentions User Retweeted": 3542
+    "Number of Neutral Mentions User Retweeted": 3542,
+    "Number of Complaints": 4075
   },
   {
     "Accounts": "bank2",
@@ -6471,7 +6548,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2210,
     "Number of Negative Mentions User Retweeted": 2775,
     "Number of Neutral Mentions Retweeted": 2866,
-    "Number of Neutral Mentions User Retweeted": 4288
+    "Number of Neutral Mentions User Retweeted": 4288,
+    "Number of Complaints": 6017
   },
   {
     "Accounts": "bank2",
@@ -6554,7 +6632,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3126,
     "Number of Negative Mentions User Retweeted": 2131,
     "Number of Neutral Mentions Retweeted": 3269,
-    "Number of Neutral Mentions User Retweeted": 4416
+    "Number of Neutral Mentions User Retweeted": 4416,
+    "Number of Complaints": 8944
   },
   {
     "Accounts": "bank2",
@@ -6637,7 +6716,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3258,
     "Number of Negative Mentions User Retweeted": 2948,
     "Number of Neutral Mentions Retweeted": 3148,
-    "Number of Neutral Mentions User Retweeted": 2675
+    "Number of Neutral Mentions User Retweeted": 2675,
+    "Number of Complaints": 9068
   },
   {
     "Accounts": "bank2",
@@ -6720,7 +6800,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2650,
     "Number of Negative Mentions User Retweeted": 1869,
     "Number of Neutral Mentions Retweeted": 1380,
-    "Number of Neutral Mentions User Retweeted": 3859
+    "Number of Neutral Mentions User Retweeted": 3859,
+    "Number of Complaints": 5315
   },
   {
     "Accounts": "bank2",
@@ -6803,7 +6884,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4524,
     "Number of Negative Mentions User Retweeted": 1097,
     "Number of Neutral Mentions Retweeted": 4385,
-    "Number of Neutral Mentions User Retweeted": 1473
+    "Number of Neutral Mentions User Retweeted": 1473,
+    "Number of Complaints": 5914
   },
   {
     "Accounts": "bank2",
@@ -6886,7 +6968,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3387,
     "Number of Negative Mentions User Retweeted": 2328,
     "Number of Neutral Mentions Retweeted": 3745,
-    "Number of Neutral Mentions User Retweeted": 3400
+    "Number of Neutral Mentions User Retweeted": 3400,
+    "Number of Complaints": 6694
   },
   {
     "Accounts": "bank2",
@@ -6969,7 +7052,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1937,
     "Number of Negative Mentions User Retweeted": 2803,
     "Number of Neutral Mentions Retweeted": 3228,
-    "Number of Neutral Mentions User Retweeted": 1067
+    "Number of Neutral Mentions User Retweeted": 1067,
+    "Number of Complaints": 6766
   },
   {
     "Accounts": "bank2",
@@ -7052,7 +7136,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4391,
     "Number of Negative Mentions User Retweeted": 3667,
     "Number of Neutral Mentions Retweeted": 1907,
-    "Number of Neutral Mentions User Retweeted": 2272
+    "Number of Neutral Mentions User Retweeted": 2272,
+    "Number of Complaints": 8539
   },
   {
     "Accounts": "bank2",
@@ -7135,7 +7220,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4100,
     "Number of Negative Mentions User Retweeted": 1686,
     "Number of Neutral Mentions Retweeted": 2250,
-    "Number of Neutral Mentions User Retweeted": 4742
+    "Number of Neutral Mentions User Retweeted": 4742,
+    "Number of Complaints": 2404
   },
   {
     "Accounts": "bank2",
@@ -7218,7 +7304,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3400,
     "Number of Negative Mentions User Retweeted": 1251,
     "Number of Neutral Mentions Retweeted": 1268,
-    "Number of Neutral Mentions User Retweeted": 2511
+    "Number of Neutral Mentions User Retweeted": 2511,
+    "Number of Complaints": 6470
   },
   {
     "Accounts": "bank2",
@@ -7301,7 +7388,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4899,
     "Number of Negative Mentions User Retweeted": 2952,
     "Number of Neutral Mentions Retweeted": 1708,
-    "Number of Neutral Mentions User Retweeted": 1096
+    "Number of Neutral Mentions User Retweeted": 1096,
+    "Number of Complaints": 6989
   },
   {
     "Accounts": "bank2",
@@ -7384,7 +7472,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4537,
     "Number of Negative Mentions User Retweeted": 4274,
     "Number of Neutral Mentions Retweeted": 3569,
-    "Number of Neutral Mentions User Retweeted": 3910
+    "Number of Neutral Mentions User Retweeted": 3910,
+    "Number of Complaints": 8114
   },
   {
     "Accounts": "bank2",
@@ -7467,7 +7556,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1602,
     "Number of Negative Mentions User Retweeted": 3762,
     "Number of Neutral Mentions Retweeted": 3831,
-    "Number of Neutral Mentions User Retweeted": 2236
+    "Number of Neutral Mentions User Retweeted": 2236,
+    "Number of Complaints": 3919
   },
   {
     "Accounts": "bank2",
@@ -7550,7 +7640,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1288,
     "Number of Negative Mentions User Retweeted": 1420,
     "Number of Neutral Mentions Retweeted": 1262,
-    "Number of Neutral Mentions User Retweeted": 4835
+    "Number of Neutral Mentions User Retweeted": 4835,
+    "Number of Complaints": 8125
   },
   {
     "Accounts": "bank2",
@@ -7633,7 +7724,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4152,
     "Number of Negative Mentions User Retweeted": 3458,
     "Number of Neutral Mentions Retweeted": 1980,
-    "Number of Neutral Mentions User Retweeted": 2968
+    "Number of Neutral Mentions User Retweeted": 2968,
+    "Number of Complaints": 9407
   },
   {
     "Accounts": "bank2",
@@ -7716,7 +7808,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1029,
     "Number of Negative Mentions User Retweeted": 3913,
     "Number of Neutral Mentions Retweeted": 4402,
-    "Number of Neutral Mentions User Retweeted": 2887
+    "Number of Neutral Mentions User Retweeted": 2887,
+    "Number of Complaints": 5862
   },
   {
     "Accounts": "bank2",
@@ -7799,7 +7892,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1879,
     "Number of Negative Mentions User Retweeted": 4432,
     "Number of Neutral Mentions Retweeted": 1693,
-    "Number of Neutral Mentions User Retweeted": 4320
+    "Number of Neutral Mentions User Retweeted": 4320,
+    "Number of Complaints": 3250
   },
   {
     "Accounts": "bank2",
@@ -7882,7 +7976,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4578,
     "Number of Negative Mentions User Retweeted": 4659,
     "Number of Neutral Mentions Retweeted": 3938,
-    "Number of Neutral Mentions User Retweeted": 3738
+    "Number of Neutral Mentions User Retweeted": 3738,
+    "Number of Complaints": 9793
   },
   {
     "Accounts": "bank2",
@@ -7965,7 +8060,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1580,
     "Number of Negative Mentions User Retweeted": 3202,
     "Number of Neutral Mentions Retweeted": 4345,
-    "Number of Neutral Mentions User Retweeted": 3280
+    "Number of Neutral Mentions User Retweeted": 3280,
+    "Number of Complaints": 5921
   },
   {
     "Accounts": "bank2",
@@ -8048,7 +8144,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2956,
     "Number of Negative Mentions User Retweeted": 2029,
     "Number of Neutral Mentions Retweeted": 4771,
-    "Number of Neutral Mentions User Retweeted": 2756
+    "Number of Neutral Mentions User Retweeted": 2756,
+    "Number of Complaints": 8554
   },
   {
     "Accounts": "bank2",
@@ -8131,7 +8228,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2480,
     "Number of Negative Mentions User Retweeted": 1784,
     "Number of Neutral Mentions Retweeted": 4487,
-    "Number of Neutral Mentions User Retweeted": 3340
+    "Number of Neutral Mentions User Retweeted": 3340,
+    "Number of Complaints": 3255
   },
   {
     "Accounts": "bank2",
@@ -8214,7 +8312,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2520,
     "Number of Negative Mentions User Retweeted": 4979,
     "Number of Neutral Mentions Retweeted": 3610,
-    "Number of Neutral Mentions User Retweeted": 4671
+    "Number of Neutral Mentions User Retweeted": 4671,
+    "Number of Complaints": 7267
   },
   {
     "Accounts": "bank2",
@@ -8297,7 +8396,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1453,
     "Number of Negative Mentions User Retweeted": 4658,
     "Number of Neutral Mentions Retweeted": 1024,
-    "Number of Neutral Mentions User Retweeted": 2684
+    "Number of Neutral Mentions User Retweeted": 2684,
+    "Number of Complaints": 7967
   },
   {
     "Accounts": "bank2",
@@ -8380,7 +8480,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3024,
     "Number of Negative Mentions User Retweeted": 1163,
     "Number of Neutral Mentions Retweeted": 4920,
-    "Number of Neutral Mentions User Retweeted": 4209
+    "Number of Neutral Mentions User Retweeted": 4209,
+    "Number of Complaints": 9726
   },
   {
     "Accounts": "bank2",
@@ -8463,7 +8564,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3255,
     "Number of Negative Mentions User Retweeted": 1114,
     "Number of Neutral Mentions Retweeted": 1767,
-    "Number of Neutral Mentions User Retweeted": 3004
+    "Number of Neutral Mentions User Retweeted": 3004,
+    "Number of Complaints": 9847
   },
   {
     "Accounts": "bank2",
@@ -8546,7 +8648,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4196,
     "Number of Negative Mentions User Retweeted": 2011,
     "Number of Neutral Mentions Retweeted": 1384,
-    "Number of Neutral Mentions User Retweeted": 1185
+    "Number of Neutral Mentions User Retweeted": 1185,
+    "Number of Complaints": 7702
   },
   {
     "Accounts": "bank2",
@@ -8629,7 +8732,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3854,
     "Number of Negative Mentions User Retweeted": 4282,
     "Number of Neutral Mentions Retweeted": 3307,
-    "Number of Neutral Mentions User Retweeted": 3168
+    "Number of Neutral Mentions User Retweeted": 3168,
+    "Number of Complaints": 3017
   },
   {
     "Accounts": "Bank3",
@@ -8712,7 +8816,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1879,
     "Number of Negative Mentions User Retweeted": 4951,
     "Number of Neutral Mentions Retweeted": 1037,
-    "Number of Neutral Mentions User Retweeted": 4980
+    "Number of Neutral Mentions User Retweeted": 4980,
+    "Number of Complaints": 4516
   },
   {
     "Accounts": "Bank3",
@@ -8795,7 +8900,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3589,
     "Number of Negative Mentions User Retweeted": 4532,
     "Number of Neutral Mentions Retweeted": 1756,
-    "Number of Neutral Mentions User Retweeted": 2797
+    "Number of Neutral Mentions User Retweeted": 2797,
+    "Number of Complaints": 6654
   },
   {
     "Accounts": "Bank3",
@@ -8878,7 +8984,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3365,
     "Number of Negative Mentions User Retweeted": 2226,
     "Number of Neutral Mentions Retweeted": 3724,
-    "Number of Neutral Mentions User Retweeted": 1141
+    "Number of Neutral Mentions User Retweeted": 1141,
+    "Number of Complaints": 7128
   },
   {
     "Accounts": "Bank3",
@@ -8961,7 +9068,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2121,
     "Number of Negative Mentions User Retweeted": 1265,
     "Number of Neutral Mentions Retweeted": 3219,
-    "Number of Neutral Mentions User Retweeted": 2522
+    "Number of Neutral Mentions User Retweeted": 2522,
+    "Number of Complaints": 6257
   },
   {
     "Accounts": "Bank3",
@@ -9044,7 +9152,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3254,
     "Number of Negative Mentions User Retweeted": 3290,
     "Number of Neutral Mentions Retweeted": 2140,
-    "Number of Neutral Mentions User Retweeted": 1650
+    "Number of Neutral Mentions User Retweeted": 1650,
+    "Number of Complaints": 5881
   },
   {
     "Accounts": "Bank3",
@@ -9127,7 +9236,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1260,
     "Number of Negative Mentions User Retweeted": 2892,
     "Number of Neutral Mentions Retweeted": 1277,
-    "Number of Neutral Mentions User Retweeted": 3907
+    "Number of Neutral Mentions User Retweeted": 3907,
+    "Number of Complaints": 4944
   },
   {
     "Accounts": "Bank3",
@@ -9210,7 +9320,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4689,
     "Number of Negative Mentions User Retweeted": 2570,
     "Number of Neutral Mentions Retweeted": 4658,
-    "Number of Neutral Mentions User Retweeted": 1251
+    "Number of Neutral Mentions User Retweeted": 1251,
+    "Number of Complaints": 2595
   },
   {
     "Accounts": "Bank3",
@@ -9293,7 +9404,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1481,
     "Number of Negative Mentions User Retweeted": 1929,
     "Number of Neutral Mentions Retweeted": 2107,
-    "Number of Neutral Mentions User Retweeted": 1579
+    "Number of Neutral Mentions User Retweeted": 1579,
+    "Number of Complaints": 9365
   },
   {
     "Accounts": "Bank3",
@@ -9376,7 +9488,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2722,
     "Number of Negative Mentions User Retweeted": 3408,
     "Number of Neutral Mentions Retweeted": 1383,
-    "Number of Neutral Mentions User Retweeted": 2810
+    "Number of Neutral Mentions User Retweeted": 2810,
+    "Number of Complaints": 6861
   },
   {
     "Accounts": "Bank3",
@@ -9459,7 +9572,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1734,
     "Number of Negative Mentions User Retweeted": 4196,
     "Number of Neutral Mentions Retweeted": 4199,
-    "Number of Neutral Mentions User Retweeted": 1558
+    "Number of Neutral Mentions User Retweeted": 1558,
+    "Number of Complaints": 9053
   },
   {
     "Accounts": "Bank3",
@@ -9542,7 +9656,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3661,
     "Number of Negative Mentions User Retweeted": 3761,
     "Number of Neutral Mentions Retweeted": 4562,
-    "Number of Neutral Mentions User Retweeted": 2837
+    "Number of Neutral Mentions User Retweeted": 2837,
+    "Number of Complaints": 2693
   },
   {
     "Accounts": "Bank3",
@@ -9625,7 +9740,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2917,
     "Number of Negative Mentions User Retweeted": 1831,
     "Number of Neutral Mentions Retweeted": 4514,
-    "Number of Neutral Mentions User Retweeted": 2446
+    "Number of Neutral Mentions User Retweeted": 2446,
+    "Number of Complaints": 7776
   },
   {
     "Accounts": "Bank3",
@@ -9708,7 +9824,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4641,
     "Number of Negative Mentions User Retweeted": 2872,
     "Number of Neutral Mentions Retweeted": 2775,
-    "Number of Neutral Mentions User Retweeted": 1867
+    "Number of Neutral Mentions User Retweeted": 1867,
+    "Number of Complaints": 3379
   },
   {
     "Accounts": "Bank3",
@@ -9791,7 +9908,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3388,
     "Number of Negative Mentions User Retweeted": 1089,
     "Number of Neutral Mentions Retweeted": 2945,
-    "Number of Neutral Mentions User Retweeted": 2385
+    "Number of Neutral Mentions User Retweeted": 2385,
+    "Number of Complaints": 9049
   },
   {
     "Accounts": "Bank3",
@@ -9874,7 +9992,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1167,
     "Number of Negative Mentions User Retweeted": 3074,
     "Number of Neutral Mentions Retweeted": 1201,
-    "Number of Neutral Mentions User Retweeted": 3935
+    "Number of Neutral Mentions User Retweeted": 3935,
+    "Number of Complaints": 3829
   },
   {
     "Accounts": "Bank3",
@@ -9957,7 +10076,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1286,
     "Number of Negative Mentions User Retweeted": 2434,
     "Number of Neutral Mentions Retweeted": 3386,
-    "Number of Neutral Mentions User Retweeted": 2322
+    "Number of Neutral Mentions User Retweeted": 2322,
+    "Number of Complaints": 7705
   },
   {
     "Accounts": "Bank3",
@@ -10040,7 +10160,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1764,
     "Number of Negative Mentions User Retweeted": 1740,
     "Number of Neutral Mentions Retweeted": 4756,
-    "Number of Neutral Mentions User Retweeted": 3060
+    "Number of Neutral Mentions User Retweeted": 3060,
+    "Number of Complaints": 5434
   },
   {
     "Accounts": "Bank3",
@@ -10123,7 +10244,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4870,
     "Number of Negative Mentions User Retweeted": 1524,
     "Number of Neutral Mentions Retweeted": 2703,
-    "Number of Neutral Mentions User Retweeted": 2058
+    "Number of Neutral Mentions User Retweeted": 2058,
+    "Number of Complaints": 4469
   },
   {
     "Accounts": "Bank3",
@@ -10206,7 +10328,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2590,
     "Number of Negative Mentions User Retweeted": 1826,
     "Number of Neutral Mentions Retweeted": 3658,
-    "Number of Neutral Mentions User Retweeted": 1477
+    "Number of Neutral Mentions User Retweeted": 1477,
+    "Number of Complaints": 3085
   },
   {
     "Accounts": "Bank3",
@@ -10289,7 +10412,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1316,
     "Number of Negative Mentions User Retweeted": 1980,
     "Number of Neutral Mentions Retweeted": 2499,
-    "Number of Neutral Mentions User Retweeted": 4730
+    "Number of Neutral Mentions User Retweeted": 4730,
+    "Number of Complaints": 8110
   },
   {
     "Accounts": "Bank3",
@@ -10372,7 +10496,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2849,
     "Number of Negative Mentions User Retweeted": 3933,
     "Number of Neutral Mentions Retweeted": 3282,
-    "Number of Neutral Mentions User Retweeted": 3183
+    "Number of Neutral Mentions User Retweeted": 3183,
+    "Number of Complaints": 7408
   },
   {
     "Accounts": "Bank3",
@@ -10455,7 +10580,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1350,
     "Number of Negative Mentions User Retweeted": 1122,
     "Number of Neutral Mentions Retweeted": 3606,
-    "Number of Neutral Mentions User Retweeted": 2643
+    "Number of Neutral Mentions User Retweeted": 2643,
+    "Number of Complaints": 6828
   },
   {
     "Accounts": "Bank3",
@@ -10538,7 +10664,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1508,
     "Number of Negative Mentions User Retweeted": 2177,
     "Number of Neutral Mentions Retweeted": 2711,
-    "Number of Neutral Mentions User Retweeted": 1764
+    "Number of Neutral Mentions User Retweeted": 1764,
+    "Number of Complaints": 9431
   },
   {
     "Accounts": "Bank3",
@@ -10621,7 +10748,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3224,
     "Number of Negative Mentions User Retweeted": 3625,
     "Number of Neutral Mentions Retweeted": 1781,
-    "Number of Neutral Mentions User Retweeted": 3342
+    "Number of Neutral Mentions User Retweeted": 3342,
+    "Number of Complaints": 9326
   },
   {
     "Accounts": "Bank3",
@@ -10704,7 +10832,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1599,
     "Number of Negative Mentions User Retweeted": 2829,
     "Number of Neutral Mentions Retweeted": 1560,
-    "Number of Neutral Mentions User Retweeted": 4203
+    "Number of Neutral Mentions User Retweeted": 4203,
+    "Number of Complaints": 8181
   },
   {
     "Accounts": "Bank3",
@@ -10787,7 +10916,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4878,
     "Number of Negative Mentions User Retweeted": 1467,
     "Number of Neutral Mentions Retweeted": 3122,
-    "Number of Neutral Mentions User Retweeted": 3599
+    "Number of Neutral Mentions User Retweeted": 3599,
+    "Number of Complaints": 9211
   },
   {
     "Accounts": "Bank3",
@@ -10870,7 +11000,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3259,
     "Number of Negative Mentions User Retweeted": 3172,
     "Number of Neutral Mentions Retweeted": 2582,
-    "Number of Neutral Mentions User Retweeted": 3293
+    "Number of Neutral Mentions User Retweeted": 3293,
+    "Number of Complaints": 6794
   },
   {
     "Accounts": "Bank3",
@@ -10953,7 +11084,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2562,
     "Number of Negative Mentions User Retweeted": 4503,
     "Number of Neutral Mentions Retweeted": 4138,
-    "Number of Neutral Mentions User Retweeted": 3939
+    "Number of Neutral Mentions User Retweeted": 3939,
+    "Number of Complaints": 7788
   },
   {
     "Accounts": "Bank3",
@@ -11036,7 +11168,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3451,
     "Number of Negative Mentions User Retweeted": 4682,
     "Number of Neutral Mentions Retweeted": 3088,
-    "Number of Neutral Mentions User Retweeted": 1807
+    "Number of Neutral Mentions User Retweeted": 1807,
+    "Number of Complaints": 5068
   },
   {
     "Accounts": "Bank3",
@@ -11119,7 +11252,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2387,
     "Number of Negative Mentions User Retweeted": 3465,
     "Number of Neutral Mentions Retweeted": 4433,
-    "Number of Neutral Mentions User Retweeted": 2187
+    "Number of Neutral Mentions User Retweeted": 2187,
+    "Number of Complaints": 5201
   },
   {
     "Accounts": "Bank3",
@@ -11202,7 +11336,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4357,
     "Number of Negative Mentions User Retweeted": 1254,
     "Number of Neutral Mentions Retweeted": 3869,
-    "Number of Neutral Mentions User Retweeted": 3361
+    "Number of Neutral Mentions User Retweeted": 3361,
+    "Number of Complaints": 4808
   },
   {
     "Accounts": "Bank3",
@@ -11285,7 +11420,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3086,
     "Number of Negative Mentions User Retweeted": 1802,
     "Number of Neutral Mentions Retweeted": 2823,
-    "Number of Neutral Mentions User Retweeted": 1371
+    "Number of Neutral Mentions User Retweeted": 1371,
+    "Number of Complaints": 2723
   },
   {
     "Accounts": "Bank3",
@@ -11368,7 +11504,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3013,
     "Number of Negative Mentions User Retweeted": 1705,
     "Number of Neutral Mentions Retweeted": 1537,
-    "Number of Neutral Mentions User Retweeted": 2489
+    "Number of Neutral Mentions User Retweeted": 2489,
+    "Number of Complaints": 7552
   },
   {
     "Accounts": "Bank3",
@@ -11451,7 +11588,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3914,
     "Number of Negative Mentions User Retweeted": 4030,
     "Number of Neutral Mentions Retweeted": 3272,
-    "Number of Neutral Mentions User Retweeted": 4335
+    "Number of Neutral Mentions User Retweeted": 4335,
+    "Number of Complaints": 5020
   },
   {
     "Accounts": "Bank3",
@@ -11534,7 +11672,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4725,
     "Number of Negative Mentions User Retweeted": 2573,
     "Number of Neutral Mentions Retweeted": 1469,
-    "Number of Neutral Mentions User Retweeted": 2662
+    "Number of Neutral Mentions User Retweeted": 2662,
+    "Number of Complaints": 4482
   },
   {
     "Accounts": "Bank3",
@@ -11617,7 +11756,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4176,
     "Number of Negative Mentions User Retweeted": 4042,
     "Number of Neutral Mentions Retweeted": 3094,
-    "Number of Neutral Mentions User Retweeted": 3646
+    "Number of Neutral Mentions User Retweeted": 3646,
+    "Number of Complaints": 3776
   },
   {
     "Accounts": "Bank3",
@@ -11700,7 +11840,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2126,
     "Number of Negative Mentions User Retweeted": 3512,
     "Number of Neutral Mentions Retweeted": 3371,
-    "Number of Neutral Mentions User Retweeted": 2927
+    "Number of Neutral Mentions User Retweeted": 2927,
+    "Number of Complaints": 8356
   },
   {
     "Accounts": "Bank3",
@@ -11783,7 +11924,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1837,
     "Number of Negative Mentions User Retweeted": 1255,
     "Number of Neutral Mentions Retweeted": 2078,
-    "Number of Neutral Mentions User Retweeted": 1735
+    "Number of Neutral Mentions User Retweeted": 1735,
+    "Number of Complaints": 5424
   },
   {
     "Accounts": "Bank3",
@@ -11866,7 +12008,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1133,
     "Number of Negative Mentions User Retweeted": 1019,
     "Number of Neutral Mentions Retweeted": 1688,
-    "Number of Neutral Mentions User Retweeted": 1866
+    "Number of Neutral Mentions User Retweeted": 1866,
+    "Number of Complaints": 8521
   },
   {
     "Accounts": "Bank3",
@@ -11949,7 +12092,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1023,
     "Number of Negative Mentions User Retweeted": 2087,
     "Number of Neutral Mentions Retweeted": 3117,
-    "Number of Neutral Mentions User Retweeted": 4606
+    "Number of Neutral Mentions User Retweeted": 4606,
+    "Number of Complaints": 9413
   },
   {
     "Accounts": "Bank3",
@@ -12032,7 +12176,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4294,
     "Number of Negative Mentions User Retweeted": 1787,
     "Number of Neutral Mentions Retweeted": 3654,
-    "Number of Neutral Mentions User Retweeted": 3388
+    "Number of Neutral Mentions User Retweeted": 3388,
+    "Number of Complaints": 6457
   },
   {
     "Accounts": "Bank3",
@@ -12115,7 +12260,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3886,
     "Number of Negative Mentions User Retweeted": 2349,
     "Number of Neutral Mentions Retweeted": 2205,
-    "Number of Neutral Mentions User Retweeted": 4531
+    "Number of Neutral Mentions User Retweeted": 4531,
+    "Number of Complaints": 7098
   },
   {
     "Accounts": "Bank3",
@@ -12198,7 +12344,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1041,
     "Number of Negative Mentions User Retweeted": 2765,
     "Number of Neutral Mentions Retweeted": 3688,
-    "Number of Neutral Mentions User Retweeted": 4241
+    "Number of Neutral Mentions User Retweeted": 4241,
+    "Number of Complaints": 8105
   },
   {
     "Accounts": "Bank3",
@@ -12281,7 +12428,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3713,
     "Number of Negative Mentions User Retweeted": 4522,
     "Number of Neutral Mentions Retweeted": 4313,
-    "Number of Neutral Mentions User Retweeted": 2950
+    "Number of Neutral Mentions User Retweeted": 2950,
+    "Number of Complaints": 3239
   },
   {
     "Accounts": "Bank3",
@@ -12364,7 +12512,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2480,
     "Number of Negative Mentions User Retweeted": 2113,
     "Number of Neutral Mentions Retweeted": 3650,
-    "Number of Neutral Mentions User Retweeted": 1897
+    "Number of Neutral Mentions User Retweeted": 1897,
+    "Number of Complaints": 5983
   },
   {
     "Accounts": "Bank3",
@@ -12447,7 +12596,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3218,
     "Number of Negative Mentions User Retweeted": 4207,
     "Number of Neutral Mentions Retweeted": 3190,
-    "Number of Neutral Mentions User Retweeted": 1995
+    "Number of Neutral Mentions User Retweeted": 1995,
+    "Number of Complaints": 6980
   },
   {
     "Accounts": "Bank3",
@@ -12530,7 +12680,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4215,
     "Number of Negative Mentions User Retweeted": 4349,
     "Number of Neutral Mentions Retweeted": 1670,
-    "Number of Neutral Mentions User Retweeted": 3827
+    "Number of Neutral Mentions User Retweeted": 3827,
+    "Number of Complaints": 9375
   },
   {
     "Accounts": "Bank3",
@@ -12613,7 +12764,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2186,
     "Number of Negative Mentions User Retweeted": 3021,
     "Number of Neutral Mentions Retweeted": 4634,
-    "Number of Neutral Mentions User Retweeted": 1364
+    "Number of Neutral Mentions User Retweeted": 1364,
+    "Number of Complaints": 7563
   },
   {
     "Accounts": "Bank3",
@@ -12696,7 +12848,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4256,
     "Number of Negative Mentions User Retweeted": 3280,
     "Number of Neutral Mentions Retweeted": 2232,
-    "Number of Neutral Mentions User Retweeted": 1522
+    "Number of Neutral Mentions User Retweeted": 1522,
+    "Number of Complaints": 9167
   },
   {
     "Accounts": "Bank3",
@@ -12779,7 +12932,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2446,
     "Number of Negative Mentions User Retweeted": 1116,
     "Number of Neutral Mentions Retweeted": 2286,
-    "Number of Neutral Mentions User Retweeted": 3584
+    "Number of Neutral Mentions User Retweeted": 3584,
+    "Number of Complaints": 5499
   },
   {
     "Accounts": "Bank3",
@@ -12862,7 +13016,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2333,
     "Number of Negative Mentions User Retweeted": 2791,
     "Number of Neutral Mentions Retweeted": 3224,
-    "Number of Neutral Mentions User Retweeted": 4101
+    "Number of Neutral Mentions User Retweeted": 4101,
+    "Number of Complaints": 6017
   },
   {
     "Accounts": "Bank3",
@@ -12945,7 +13100,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2364,
     "Number of Negative Mentions User Retweeted": 1887,
     "Number of Neutral Mentions Retweeted": 4170,
-    "Number of Neutral Mentions User Retweeted": 4125
+    "Number of Neutral Mentions User Retweeted": 4125,
+    "Number of Complaints": 6707
   },
   {
     "Accounts": "Fintech4",
@@ -13028,7 +13184,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4992,
     "Number of Negative Mentions User Retweeted": 4395,
     "Number of Neutral Mentions Retweeted": 3386,
-    "Number of Neutral Mentions User Retweeted": 1754
+    "Number of Neutral Mentions User Retweeted": 1754,
+    "Number of Complaints": 6148
   },
   {
     "Accounts": "Fintech4",
@@ -13111,7 +13268,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2970,
     "Number of Negative Mentions User Retweeted": 3553,
     "Number of Neutral Mentions Retweeted": 2297,
-    "Number of Neutral Mentions User Retweeted": 2582
+    "Number of Neutral Mentions User Retweeted": 2582,
+    "Number of Complaints": 7223
   },
   {
     "Accounts": "Fintech4",
@@ -13194,7 +13352,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3571,
     "Number of Negative Mentions User Retweeted": 2893,
     "Number of Neutral Mentions Retweeted": 3642,
-    "Number of Neutral Mentions User Retweeted": 1811
+    "Number of Neutral Mentions User Retweeted": 1811,
+    "Number of Complaints": 9637
   },
   {
     "Accounts": "Fintech4",
@@ -13277,7 +13436,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2988,
     "Number of Negative Mentions User Retweeted": 3760,
     "Number of Neutral Mentions Retweeted": 4182,
-    "Number of Neutral Mentions User Retweeted": 3643
+    "Number of Neutral Mentions User Retweeted": 3643,
+    "Number of Complaints": 5803
   },
   {
     "Accounts": "Fintech4",
@@ -13360,7 +13520,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1606,
     "Number of Negative Mentions User Retweeted": 1391,
     "Number of Neutral Mentions Retweeted": 2359,
-    "Number of Neutral Mentions User Retweeted": 1122
+    "Number of Neutral Mentions User Retweeted": 1122,
+    "Number of Complaints": 9894
   },
   {
     "Accounts": "Fintech4",
@@ -13443,7 +13604,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3671,
     "Number of Negative Mentions User Retweeted": 1674,
     "Number of Neutral Mentions Retweeted": 3278,
-    "Number of Neutral Mentions User Retweeted": 4806
+    "Number of Neutral Mentions User Retweeted": 4806,
+    "Number of Complaints": 8105
   },
   {
     "Accounts": "Fintech4",
@@ -13526,7 +13688,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1463,
     "Number of Negative Mentions User Retweeted": 2337,
     "Number of Neutral Mentions Retweeted": 4292,
-    "Number of Neutral Mentions User Retweeted": 3703
+    "Number of Neutral Mentions User Retweeted": 3703,
+    "Number of Complaints": 8088
   },
   {
     "Accounts": "Fintech4",
@@ -13609,7 +13772,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4940,
     "Number of Negative Mentions User Retweeted": 3847,
     "Number of Neutral Mentions Retweeted": 1821,
-    "Number of Neutral Mentions User Retweeted": 2729
+    "Number of Neutral Mentions User Retweeted": 2729,
+    "Number of Complaints": 9543
   },
   {
     "Accounts": "Fintech4",
@@ -13692,7 +13856,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1908,
     "Number of Negative Mentions User Retweeted": 4840,
     "Number of Neutral Mentions Retweeted": 2281,
-    "Number of Neutral Mentions User Retweeted": 3802
+    "Number of Neutral Mentions User Retweeted": 3802,
+    "Number of Complaints": 7923
   },
   {
     "Accounts": "Fintech4",
@@ -13775,7 +13940,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1551,
     "Number of Negative Mentions User Retweeted": 2508,
     "Number of Neutral Mentions Retweeted": 2582,
-    "Number of Neutral Mentions User Retweeted": 2100
+    "Number of Neutral Mentions User Retweeted": 2100,
+    "Number of Complaints": 3858
   },
   {
     "Accounts": "Fintech4",
@@ -13858,7 +14024,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1492,
     "Number of Negative Mentions User Retweeted": 3330,
     "Number of Neutral Mentions Retweeted": 4101,
-    "Number of Neutral Mentions User Retweeted": 4598
+    "Number of Neutral Mentions User Retweeted": 4598,
+    "Number of Complaints": 5663
   },
   {
     "Accounts": "Fintech4",
@@ -13941,7 +14108,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1852,
     "Number of Negative Mentions User Retweeted": 3655,
     "Number of Neutral Mentions Retweeted": 1753,
-    "Number of Neutral Mentions User Retweeted": 2985
+    "Number of Neutral Mentions User Retweeted": 2985,
+    "Number of Complaints": 5138
   },
   {
     "Accounts": "Fintech4",
@@ -14024,7 +14192,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4960,
     "Number of Negative Mentions User Retweeted": 1413,
     "Number of Neutral Mentions Retweeted": 2811,
-    "Number of Neutral Mentions User Retweeted": 4616
+    "Number of Neutral Mentions User Retweeted": 4616,
+    "Number of Complaints": 9784
   },
   {
     "Accounts": "Fintech4",
@@ -14107,7 +14276,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4880,
     "Number of Negative Mentions User Retweeted": 2984,
     "Number of Neutral Mentions Retweeted": 1463,
-    "Number of Neutral Mentions User Retweeted": 4624
+    "Number of Neutral Mentions User Retweeted": 4624,
+    "Number of Complaints": 8936
   },
   {
     "Accounts": "Fintech4",
@@ -14190,7 +14360,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1982,
     "Number of Negative Mentions User Retweeted": 3973,
     "Number of Neutral Mentions Retweeted": 3138,
-    "Number of Neutral Mentions User Retweeted": 1697
+    "Number of Neutral Mentions User Retweeted": 1697,
+    "Number of Complaints": 8574
   },
   {
     "Accounts": "Fintech4",
@@ -14273,7 +14444,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3006,
     "Number of Negative Mentions User Retweeted": 2328,
     "Number of Neutral Mentions Retweeted": 2640,
-    "Number of Neutral Mentions User Retweeted": 1370
+    "Number of Neutral Mentions User Retweeted": 1370,
+    "Number of Complaints": 8345
   },
   {
     "Accounts": "Fintech4",
@@ -14356,7 +14528,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4780,
     "Number of Negative Mentions User Retweeted": 4565,
     "Number of Neutral Mentions Retweeted": 1851,
-    "Number of Neutral Mentions User Retweeted": 4139
+    "Number of Neutral Mentions User Retweeted": 4139,
+    "Number of Complaints": 8110
   },
   {
     "Accounts": "Fintech4",
@@ -14439,7 +14612,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1941,
     "Number of Negative Mentions User Retweeted": 1137,
     "Number of Neutral Mentions Retweeted": 3289,
-    "Number of Neutral Mentions User Retweeted": 1215
+    "Number of Neutral Mentions User Retweeted": 1215,
+    "Number of Complaints": 2229
   },
   {
     "Accounts": "Fintech4",
@@ -14522,7 +14696,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3453,
     "Number of Negative Mentions User Retweeted": 4771,
     "Number of Neutral Mentions Retweeted": 1853,
-    "Number of Neutral Mentions User Retweeted": 3749
+    "Number of Neutral Mentions User Retweeted": 3749,
+    "Number of Complaints": 2714
   },
   {
     "Accounts": "Fintech4",
@@ -14605,7 +14780,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1977,
     "Number of Negative Mentions User Retweeted": 2641,
     "Number of Neutral Mentions Retweeted": 4497,
-    "Number of Neutral Mentions User Retweeted": 2407
+    "Number of Neutral Mentions User Retweeted": 2407,
+    "Number of Complaints": 9497
   },
   {
     "Accounts": "Fintech4",
@@ -14688,7 +14864,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3838,
     "Number of Negative Mentions User Retweeted": 3797,
     "Number of Neutral Mentions Retweeted": 1416,
-    "Number of Neutral Mentions User Retweeted": 2589
+    "Number of Neutral Mentions User Retweeted": 2589,
+    "Number of Complaints": 3287
   },
   {
     "Accounts": "Fintech4",
@@ -14771,7 +14948,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4286,
     "Number of Negative Mentions User Retweeted": 4032,
     "Number of Neutral Mentions Retweeted": 4935,
-    "Number of Neutral Mentions User Retweeted": 2883
+    "Number of Neutral Mentions User Retweeted": 2883,
+    "Number of Complaints": 2158
   },
   {
     "Accounts": "Fintech4",
@@ -14854,7 +15032,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1875,
     "Number of Negative Mentions User Retweeted": 4559,
     "Number of Neutral Mentions Retweeted": 3656,
-    "Number of Neutral Mentions User Retweeted": 2418
+    "Number of Neutral Mentions User Retweeted": 2418,
+    "Number of Complaints": 7312
   },
   {
     "Accounts": "Fintech4",
@@ -14937,7 +15116,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1098,
     "Number of Negative Mentions User Retweeted": 4509,
     "Number of Neutral Mentions Retweeted": 4332,
-    "Number of Neutral Mentions User Retweeted": 2847
+    "Number of Neutral Mentions User Retweeted": 2847,
+    "Number of Complaints": 3185
   },
   {
     "Accounts": "Fintech4",
@@ -15020,7 +15200,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2924,
     "Number of Negative Mentions User Retweeted": 3858,
     "Number of Neutral Mentions Retweeted": 4887,
-    "Number of Neutral Mentions User Retweeted": 1575
+    "Number of Neutral Mentions User Retweeted": 1575,
+    "Number of Complaints": 4330
   },
   {
     "Accounts": "Fintech4",
@@ -15103,7 +15284,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2545,
     "Number of Negative Mentions User Retweeted": 1199,
     "Number of Neutral Mentions Retweeted": 2357,
-    "Number of Neutral Mentions User Retweeted": 2622
+    "Number of Neutral Mentions User Retweeted": 2622,
+    "Number of Complaints": 8117
   },
   {
     "Accounts": "Fintech4",
@@ -15186,7 +15368,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2980,
     "Number of Negative Mentions User Retweeted": 3886,
     "Number of Neutral Mentions Retweeted": 2499,
-    "Number of Neutral Mentions User Retweeted": 1952
+    "Number of Neutral Mentions User Retweeted": 1952,
+    "Number of Complaints": 8327
   },
   {
     "Accounts": "Fintech4",
@@ -15269,7 +15452,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4684,
     "Number of Negative Mentions User Retweeted": 1451,
     "Number of Neutral Mentions Retweeted": 1332,
-    "Number of Neutral Mentions User Retweeted": 4577
+    "Number of Neutral Mentions User Retweeted": 4577,
+    "Number of Complaints": 9482
   },
   {
     "Accounts": "Fintech4",
@@ -15352,7 +15536,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2024,
     "Number of Negative Mentions User Retweeted": 4445,
     "Number of Neutral Mentions Retweeted": 3876,
-    "Number of Neutral Mentions User Retweeted": 1655
+    "Number of Neutral Mentions User Retweeted": 1655,
+    "Number of Complaints": 2856
   },
   {
     "Accounts": "Fintech4",
@@ -15435,7 +15620,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4719,
     "Number of Negative Mentions User Retweeted": 3064,
     "Number of Neutral Mentions Retweeted": 1544,
-    "Number of Neutral Mentions User Retweeted": 1327
+    "Number of Neutral Mentions User Retweeted": 1327,
+    "Number of Complaints": 2245
   },
   {
     "Accounts": "Fintech4",
@@ -15518,7 +15704,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3976,
     "Number of Negative Mentions User Retweeted": 4491,
     "Number of Neutral Mentions Retweeted": 3066,
-    "Number of Neutral Mentions User Retweeted": 3434
+    "Number of Neutral Mentions User Retweeted": 3434,
+    "Number of Complaints": 6713
   },
   {
     "Accounts": "Fintech4",
@@ -15601,7 +15788,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2715,
     "Number of Negative Mentions User Retweeted": 1851,
     "Number of Neutral Mentions Retweeted": 1690,
-    "Number of Neutral Mentions User Retweeted": 1601
+    "Number of Neutral Mentions User Retweeted": 1601,
+    "Number of Complaints": 6703
   },
   {
     "Accounts": "Fintech4",
@@ -15684,7 +15872,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2639,
     "Number of Negative Mentions User Retweeted": 4603,
     "Number of Neutral Mentions Retweeted": 4519,
-    "Number of Neutral Mentions User Retweeted": 2273
+    "Number of Neutral Mentions User Retweeted": 2273,
+    "Number of Complaints": 8750
   },
   {
     "Accounts": "Fintech4",
@@ -15767,7 +15956,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1289,
     "Number of Negative Mentions User Retweeted": 4493,
     "Number of Neutral Mentions Retweeted": 3793,
-    "Number of Neutral Mentions User Retweeted": 3812
+    "Number of Neutral Mentions User Retweeted": 3812,
+    "Number of Complaints": 3626
   },
   {
     "Accounts": "Fintech4",
@@ -15850,7 +16040,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4424,
     "Number of Negative Mentions User Retweeted": 2930,
     "Number of Neutral Mentions Retweeted": 1618,
-    "Number of Neutral Mentions User Retweeted": 3241
+    "Number of Neutral Mentions User Retweeted": 3241,
+    "Number of Complaints": 7708
   },
   {
     "Accounts": "Fintech4",
@@ -15933,7 +16124,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3786,
     "Number of Negative Mentions User Retweeted": 2960,
     "Number of Neutral Mentions Retweeted": 2298,
-    "Number of Neutral Mentions User Retweeted": 1605
+    "Number of Neutral Mentions User Retweeted": 1605,
+    "Number of Complaints": 3678
   },
   {
     "Accounts": "Fintech4",
@@ -16016,7 +16208,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4086,
     "Number of Negative Mentions User Retweeted": 1248,
     "Number of Neutral Mentions Retweeted": 1129,
-    "Number of Neutral Mentions User Retweeted": 3350
+    "Number of Neutral Mentions User Retweeted": 3350,
+    "Number of Complaints": 3375
   },
   {
     "Accounts": "Fintech4",
@@ -16099,7 +16292,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2977,
     "Number of Negative Mentions User Retweeted": 4974,
     "Number of Neutral Mentions Retweeted": 1394,
-    "Number of Neutral Mentions User Retweeted": 1632
+    "Number of Neutral Mentions User Retweeted": 1632,
+    "Number of Complaints": 3340
   },
   {
     "Accounts": "Fintech4",
@@ -16182,7 +16376,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4163,
     "Number of Negative Mentions User Retweeted": 3923,
     "Number of Neutral Mentions Retweeted": 2228,
-    "Number of Neutral Mentions User Retweeted": 4363
+    "Number of Neutral Mentions User Retweeted": 4363,
+    "Number of Complaints": 7924
   },
   {
     "Accounts": "Fintech4",
@@ -16265,7 +16460,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3236,
     "Number of Negative Mentions User Retweeted": 3627,
     "Number of Neutral Mentions Retweeted": 2460,
-    "Number of Neutral Mentions User Retweeted": 3294
+    "Number of Neutral Mentions User Retweeted": 3294,
+    "Number of Complaints": 5840
   },
   {
     "Accounts": "Fintech4",
@@ -16348,7 +16544,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4194,
     "Number of Negative Mentions User Retweeted": 4521,
     "Number of Neutral Mentions Retweeted": 4037,
-    "Number of Neutral Mentions User Retweeted": 1899
+    "Number of Neutral Mentions User Retweeted": 1899,
+    "Number of Complaints": 5853
   },
   {
     "Accounts": "Fintech4",
@@ -16431,7 +16628,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4928,
     "Number of Negative Mentions User Retweeted": 3085,
     "Number of Neutral Mentions Retweeted": 1108,
-    "Number of Neutral Mentions User Retweeted": 3933
+    "Number of Neutral Mentions User Retweeted": 3933,
+    "Number of Complaints": 6124
   },
   {
     "Accounts": "Fintech4",
@@ -16514,7 +16712,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4745,
     "Number of Negative Mentions User Retweeted": 3938,
     "Number of Neutral Mentions Retweeted": 1178,
-    "Number of Neutral Mentions User Retweeted": 4574
+    "Number of Neutral Mentions User Retweeted": 4574,
+    "Number of Complaints": 9211
   },
   {
     "Accounts": "Fintech4",
@@ -16597,7 +16796,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4817,
     "Number of Negative Mentions User Retweeted": 1834,
     "Number of Neutral Mentions Retweeted": 2808,
-    "Number of Neutral Mentions User Retweeted": 1564
+    "Number of Neutral Mentions User Retweeted": 1564,
+    "Number of Complaints": 2944
   },
   {
     "Accounts": "Fintech4",
@@ -16680,7 +16880,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4946,
     "Number of Negative Mentions User Retweeted": 2917,
     "Number of Neutral Mentions Retweeted": 1802,
-    "Number of Neutral Mentions User Retweeted": 3637
+    "Number of Neutral Mentions User Retweeted": 3637,
+    "Number of Complaints": 4957
   },
   {
     "Accounts": "Fintech4",
@@ -16763,7 +16964,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3340,
     "Number of Negative Mentions User Retweeted": 3394,
     "Number of Neutral Mentions Retweeted": 2001,
-    "Number of Neutral Mentions User Retweeted": 4245
+    "Number of Neutral Mentions User Retweeted": 4245,
+    "Number of Complaints": 5754
   },
   {
     "Accounts": "Fintech4",
@@ -16846,7 +17048,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4708,
     "Number of Negative Mentions User Retweeted": 4411,
     "Number of Neutral Mentions Retweeted": 3552,
-    "Number of Neutral Mentions User Retweeted": 1700
+    "Number of Neutral Mentions User Retweeted": 1700,
+    "Number of Complaints": 4804
   },
   {
     "Accounts": "Fintech4",
@@ -16929,7 +17132,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2691,
     "Number of Negative Mentions User Retweeted": 1228,
     "Number of Neutral Mentions Retweeted": 4811,
-    "Number of Neutral Mentions User Retweeted": 2591
+    "Number of Neutral Mentions User Retweeted": 2591,
+    "Number of Complaints": 8044
   },
   {
     "Accounts": "Fintech4",
@@ -17012,7 +17216,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4148,
     "Number of Negative Mentions User Retweeted": 3218,
     "Number of Neutral Mentions Retweeted": 1990,
-    "Number of Neutral Mentions User Retweeted": 4161
+    "Number of Neutral Mentions User Retweeted": 4161,
+    "Number of Complaints": 8662
   },
   {
     "Accounts": "Fintech4",
@@ -17095,7 +17300,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3895,
     "Number of Negative Mentions User Retweeted": 1924,
     "Number of Neutral Mentions Retweeted": 1317,
-    "Number of Neutral Mentions User Retweeted": 3935
+    "Number of Neutral Mentions User Retweeted": 3935,
+    "Number of Complaints": 4290
   },
   {
     "Accounts": "Fintech4",
@@ -17178,7 +17384,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4933,
     "Number of Negative Mentions User Retweeted": 3761,
     "Number of Neutral Mentions Retweeted": 3020,
-    "Number of Neutral Mentions User Retweeted": 1102
+    "Number of Neutral Mentions User Retweeted": 1102,
+    "Number of Complaints": 7793
   },
   {
     "Accounts": "Fintech4",
@@ -17261,7 +17468,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4799,
     "Number of Negative Mentions User Retweeted": 4894,
     "Number of Neutral Mentions Retweeted": 1106,
-    "Number of Neutral Mentions User Retweeted": 3845
+    "Number of Neutral Mentions User Retweeted": 3845,
+    "Number of Complaints": 2142
   },
   {
     "Accounts": "Fintech5",
@@ -17344,7 +17552,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3804,
     "Number of Negative Mentions User Retweeted": 2439,
     "Number of Neutral Mentions Retweeted": 2697,
-    "Number of Neutral Mentions User Retweeted": 4916
+    "Number of Neutral Mentions User Retweeted": 4916,
+    "Number of Complaints": 3575
   },
   {
     "Accounts": "Fintech5",
@@ -17427,7 +17636,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3607,
     "Number of Negative Mentions User Retweeted": 4747,
     "Number of Neutral Mentions Retweeted": 1619,
-    "Number of Neutral Mentions User Retweeted": 4540
+    "Number of Neutral Mentions User Retweeted": 4540,
+    "Number of Complaints": 8573
   },
   {
     "Accounts": "Fintech5",
@@ -17510,7 +17720,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1610,
     "Number of Negative Mentions User Retweeted": 2709,
     "Number of Neutral Mentions Retweeted": 4594,
-    "Number of Neutral Mentions User Retweeted": 1720
+    "Number of Neutral Mentions User Retweeted": 1720,
+    "Number of Complaints": 5913
   },
   {
     "Accounts": "Fintech5",
@@ -17593,7 +17804,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2489,
     "Number of Negative Mentions User Retweeted": 1939,
     "Number of Neutral Mentions Retweeted": 1302,
-    "Number of Neutral Mentions User Retweeted": 3421
+    "Number of Neutral Mentions User Retweeted": 3421,
+    "Number of Complaints": 7419
   },
   {
     "Accounts": "Fintech5",
@@ -17676,7 +17888,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4916,
     "Number of Negative Mentions User Retweeted": 1381,
     "Number of Neutral Mentions Retweeted": 1191,
-    "Number of Neutral Mentions User Retweeted": 3050
+    "Number of Neutral Mentions User Retweeted": 3050,
+    "Number of Complaints": 8939
   },
   {
     "Accounts": "Fintech5",
@@ -17759,7 +17972,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4031,
     "Number of Negative Mentions User Retweeted": 1179,
     "Number of Neutral Mentions Retweeted": 1232,
-    "Number of Neutral Mentions User Retweeted": 2487
+    "Number of Neutral Mentions User Retweeted": 2487,
+    "Number of Complaints": 9109
   },
   {
     "Accounts": "Fintech5",
@@ -17842,7 +18056,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4575,
     "Number of Negative Mentions User Retweeted": 3366,
     "Number of Neutral Mentions Retweeted": 2567,
-    "Number of Neutral Mentions User Retweeted": 1812
+    "Number of Neutral Mentions User Retweeted": 1812,
+    "Number of Complaints": 9831
   },
   {
     "Accounts": "Fintech5",
@@ -17925,7 +18140,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3312,
     "Number of Negative Mentions User Retweeted": 1827,
     "Number of Neutral Mentions Retweeted": 1191,
-    "Number of Neutral Mentions User Retweeted": 3791
+    "Number of Neutral Mentions User Retweeted": 3791,
+    "Number of Complaints": 6626
   },
   {
     "Accounts": "Fintech5",
@@ -18008,7 +18224,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2920,
     "Number of Negative Mentions User Retweeted": 2953,
     "Number of Neutral Mentions Retweeted": 2554,
-    "Number of Neutral Mentions User Retweeted": 2039
+    "Number of Neutral Mentions User Retweeted": 2039,
+    "Number of Complaints": 9760
   },
   {
     "Accounts": "Fintech5",
@@ -18091,7 +18308,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3578,
     "Number of Negative Mentions User Retweeted": 2742,
     "Number of Neutral Mentions Retweeted": 1857,
-    "Number of Neutral Mentions User Retweeted": 2202
+    "Number of Neutral Mentions User Retweeted": 2202,
+    "Number of Complaints": 3213
   },
   {
     "Accounts": "Fintech5",
@@ -18174,7 +18392,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3350,
     "Number of Negative Mentions User Retweeted": 1905,
     "Number of Neutral Mentions Retweeted": 2193,
-    "Number of Neutral Mentions User Retweeted": 3686
+    "Number of Neutral Mentions User Retweeted": 3686,
+    "Number of Complaints": 7907
   },
   {
     "Accounts": "Fintech5",
@@ -18257,7 +18476,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4087,
     "Number of Negative Mentions User Retweeted": 1898,
     "Number of Neutral Mentions Retweeted": 2036,
-    "Number of Neutral Mentions User Retweeted": 2776
+    "Number of Neutral Mentions User Retweeted": 2776,
+    "Number of Complaints": 2149
   },
   {
     "Accounts": "Fintech5",
@@ -18340,7 +18560,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1445,
     "Number of Negative Mentions User Retweeted": 3720,
     "Number of Neutral Mentions Retweeted": 2279,
-    "Number of Neutral Mentions User Retweeted": 4302
+    "Number of Neutral Mentions User Retweeted": 4302,
+    "Number of Complaints": 2217
   },
   {
     "Accounts": "Fintech5",
@@ -18423,7 +18644,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1331,
     "Number of Negative Mentions User Retweeted": 3415,
     "Number of Neutral Mentions Retweeted": 3523,
-    "Number of Neutral Mentions User Retweeted": 1206
+    "Number of Neutral Mentions User Retweeted": 1206,
+    "Number of Complaints": 3976
   },
   {
     "Accounts": "Fintech5",
@@ -18506,7 +18728,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2014,
     "Number of Negative Mentions User Retweeted": 3170,
     "Number of Neutral Mentions Retweeted": 2693,
-    "Number of Neutral Mentions User Retweeted": 3001
+    "Number of Neutral Mentions User Retweeted": 3001,
+    "Number of Complaints": 4793
   },
   {
     "Accounts": "Fintech5",
@@ -18589,7 +18812,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2249,
     "Number of Negative Mentions User Retweeted": 3980,
     "Number of Neutral Mentions Retweeted": 1619,
-    "Number of Neutral Mentions User Retweeted": 1716
+    "Number of Neutral Mentions User Retweeted": 1716,
+    "Number of Complaints": 4300
   },
   {
     "Accounts": "Fintech5",
@@ -18672,7 +18896,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2037,
     "Number of Negative Mentions User Retweeted": 3723,
     "Number of Neutral Mentions Retweeted": 4834,
-    "Number of Neutral Mentions User Retweeted": 1008
+    "Number of Neutral Mentions User Retweeted": 1008,
+    "Number of Complaints": 5333
   },
   {
     "Accounts": "Fintech5",
@@ -18755,7 +18980,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3222,
     "Number of Negative Mentions User Retweeted": 1390,
     "Number of Neutral Mentions Retweeted": 3182,
-    "Number of Neutral Mentions User Retweeted": 2905
+    "Number of Neutral Mentions User Retweeted": 2905,
+    "Number of Complaints": 7193
   },
   {
     "Accounts": "Fintech5",
@@ -18838,7 +19064,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3316,
     "Number of Negative Mentions User Retweeted": 2311,
     "Number of Neutral Mentions Retweeted": 2435,
-    "Number of Neutral Mentions User Retweeted": 1564
+    "Number of Neutral Mentions User Retweeted": 1564,
+    "Number of Complaints": 4487
   },
   {
     "Accounts": "Fintech5",
@@ -18921,7 +19148,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3315,
     "Number of Negative Mentions User Retweeted": 2353,
     "Number of Neutral Mentions Retweeted": 1579,
-    "Number of Neutral Mentions User Retweeted": 3863
+    "Number of Neutral Mentions User Retweeted": 3863,
+    "Number of Complaints": 4793
   },
   {
     "Accounts": "Fintech5",
@@ -19004,7 +19232,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2545,
     "Number of Negative Mentions User Retweeted": 2488,
     "Number of Neutral Mentions Retweeted": 4486,
-    "Number of Neutral Mentions User Retweeted": 2826
+    "Number of Neutral Mentions User Retweeted": 2826,
+    "Number of Complaints": 5533
   },
   {
     "Accounts": "Fintech5",
@@ -19087,7 +19316,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1299,
     "Number of Negative Mentions User Retweeted": 4218,
     "Number of Neutral Mentions Retweeted": 4967,
-    "Number of Neutral Mentions User Retweeted": 4302
+    "Number of Neutral Mentions User Retweeted": 4302,
+    "Number of Complaints": 4586
   },
   {
     "Accounts": "Fintech5",
@@ -19170,7 +19400,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3809,
     "Number of Negative Mentions User Retweeted": 4586,
     "Number of Neutral Mentions Retweeted": 3346,
-    "Number of Neutral Mentions User Retweeted": 3277
+    "Number of Neutral Mentions User Retweeted": 3277,
+    "Number of Complaints": 5962
   },
   {
     "Accounts": "Fintech5",
@@ -19253,7 +19484,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3258,
     "Number of Negative Mentions User Retweeted": 3183,
     "Number of Neutral Mentions Retweeted": 4745,
-    "Number of Neutral Mentions User Retweeted": 4294
+    "Number of Neutral Mentions User Retweeted": 4294,
+    "Number of Complaints": 3262
   },
   {
     "Accounts": "Fintech5",
@@ -19336,7 +19568,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2454,
     "Number of Negative Mentions User Retweeted": 2959,
     "Number of Neutral Mentions Retweeted": 4481,
-    "Number of Neutral Mentions User Retweeted": 3429
+    "Number of Neutral Mentions User Retweeted": 3429,
+    "Number of Complaints": 7731
   },
   {
     "Accounts": "Fintech5",
@@ -19419,7 +19652,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4506,
     "Number of Negative Mentions User Retweeted": 4268,
     "Number of Neutral Mentions Retweeted": 3601,
-    "Number of Neutral Mentions User Retweeted": 1725
+    "Number of Neutral Mentions User Retweeted": 1725,
+    "Number of Complaints": 6597
   },
   {
     "Accounts": "Fintech5",
@@ -19502,7 +19736,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2780,
     "Number of Negative Mentions User Retweeted": 2756,
     "Number of Neutral Mentions Retweeted": 3783,
-    "Number of Neutral Mentions User Retweeted": 1758
+    "Number of Neutral Mentions User Retweeted": 1758,
+    "Number of Complaints": 3707
   },
   {
     "Accounts": "Fintech5",
@@ -19585,7 +19820,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3311,
     "Number of Negative Mentions User Retweeted": 2940,
     "Number of Neutral Mentions Retweeted": 3715,
-    "Number of Neutral Mentions User Retweeted": 4994
+    "Number of Neutral Mentions User Retweeted": 4994,
+    "Number of Complaints": 3381
   },
   {
     "Accounts": "Fintech5",
@@ -19668,7 +19904,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3565,
     "Number of Negative Mentions User Retweeted": 3327,
     "Number of Neutral Mentions Retweeted": 1017,
-    "Number of Neutral Mentions User Retweeted": 3695
+    "Number of Neutral Mentions User Retweeted": 3695,
+    "Number of Complaints": 7662
   },
   {
     "Accounts": "Fintech5",
@@ -19751,7 +19988,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2557,
     "Number of Negative Mentions User Retweeted": 4385,
     "Number of Neutral Mentions Retweeted": 3099,
-    "Number of Neutral Mentions User Retweeted": 1434
+    "Number of Neutral Mentions User Retweeted": 1434,
+    "Number of Complaints": 6545
   },
   {
     "Accounts": "Fintech5",
@@ -19834,7 +20072,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1669,
     "Number of Negative Mentions User Retweeted": 1310,
     "Number of Neutral Mentions Retweeted": 3141,
-    "Number of Neutral Mentions User Retweeted": 3185
+    "Number of Neutral Mentions User Retweeted": 3185,
+    "Number of Complaints": 3834
   },
   {
     "Accounts": "Fintech5",
@@ -19917,7 +20156,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3850,
     "Number of Negative Mentions User Retweeted": 1492,
     "Number of Neutral Mentions Retweeted": 3434,
-    "Number of Neutral Mentions User Retweeted": 1088
+    "Number of Neutral Mentions User Retweeted": 1088,
+    "Number of Complaints": 9060
   },
   {
     "Accounts": "Fintech5",
@@ -20000,7 +20240,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2350,
     "Number of Negative Mentions User Retweeted": 1667,
     "Number of Neutral Mentions Retweeted": 3155,
-    "Number of Neutral Mentions User Retweeted": 4013
+    "Number of Neutral Mentions User Retweeted": 4013,
+    "Number of Complaints": 8734
   },
   {
     "Accounts": "Fintech5",
@@ -20083,7 +20324,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2880,
     "Number of Negative Mentions User Retweeted": 2990,
     "Number of Neutral Mentions Retweeted": 3477,
-    "Number of Neutral Mentions User Retweeted": 1170
+    "Number of Neutral Mentions User Retweeted": 1170,
+    "Number of Complaints": 2326
   },
   {
     "Accounts": "Fintech5",
@@ -20166,7 +20408,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4805,
     "Number of Negative Mentions User Retweeted": 2025,
     "Number of Neutral Mentions Retweeted": 4487,
-    "Number of Neutral Mentions User Retweeted": 1341
+    "Number of Neutral Mentions User Retweeted": 1341,
+    "Number of Complaints": 3390
   },
   {
     "Accounts": "Fintech5",
@@ -20249,7 +20492,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2019,
     "Number of Negative Mentions User Retweeted": 1613,
     "Number of Neutral Mentions Retweeted": 3473,
-    "Number of Neutral Mentions User Retweeted": 4509
+    "Number of Neutral Mentions User Retweeted": 4509,
+    "Number of Complaints": 5150
   },
   {
     "Accounts": "Fintech5",
@@ -20332,7 +20576,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1355,
     "Number of Negative Mentions User Retweeted": 2270,
     "Number of Neutral Mentions Retweeted": 4354,
-    "Number of Neutral Mentions User Retweeted": 4291
+    "Number of Neutral Mentions User Retweeted": 4291,
+    "Number of Complaints": 9242
   },
   {
     "Accounts": "Fintech5",
@@ -20415,7 +20660,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4338,
     "Number of Negative Mentions User Retweeted": 3560,
     "Number of Neutral Mentions Retweeted": 2599,
-    "Number of Neutral Mentions User Retweeted": 3556
+    "Number of Neutral Mentions User Retweeted": 3556,
+    "Number of Complaints": 7967
   },
   {
     "Accounts": "Fintech5",
@@ -20498,7 +20744,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 3700,
     "Number of Negative Mentions User Retweeted": 2271,
     "Number of Neutral Mentions Retweeted": 1886,
-    "Number of Neutral Mentions User Retweeted": 2716
+    "Number of Neutral Mentions User Retweeted": 2716,
+    "Number of Complaints": 6578
   },
   {
     "Accounts": "Fintech5",
@@ -20581,7 +20828,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2716,
     "Number of Negative Mentions User Retweeted": 3031,
     "Number of Neutral Mentions Retweeted": 1258,
-    "Number of Neutral Mentions User Retweeted": 2680
+    "Number of Neutral Mentions User Retweeted": 2680,
+    "Number of Complaints": 9158
   },
   {
     "Accounts": "Fintech5",
@@ -20664,7 +20912,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1795,
     "Number of Negative Mentions User Retweeted": 1713,
     "Number of Neutral Mentions Retweeted": 1896,
-    "Number of Neutral Mentions User Retweeted": 2848
+    "Number of Neutral Mentions User Retweeted": 2848,
+    "Number of Complaints": 3511
   },
   {
     "Accounts": "Fintech5",
@@ -20747,7 +20996,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2382,
     "Number of Negative Mentions User Retweeted": 4621,
     "Number of Neutral Mentions Retweeted": 3949,
-    "Number of Neutral Mentions User Retweeted": 3556
+    "Number of Neutral Mentions User Retweeted": 3556,
+    "Number of Complaints": 5807
   },
   {
     "Accounts": "Fintech5",
@@ -20830,7 +21080,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1563,
     "Number of Negative Mentions User Retweeted": 1750,
     "Number of Neutral Mentions Retweeted": 4571,
-    "Number of Neutral Mentions User Retweeted": 4477
+    "Number of Neutral Mentions User Retweeted": 4477,
+    "Number of Complaints": 9971
   },
   {
     "Accounts": "Fintech5",
@@ -20913,7 +21164,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4763,
     "Number of Negative Mentions User Retweeted": 4651,
     "Number of Neutral Mentions Retweeted": 3479,
-    "Number of Neutral Mentions User Retweeted": 4815
+    "Number of Neutral Mentions User Retweeted": 4815,
+    "Number of Complaints": 5375
   },
   {
     "Accounts": "Fintech5",
@@ -20996,7 +21248,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4207,
     "Number of Negative Mentions User Retweeted": 2280,
     "Number of Neutral Mentions Retweeted": 4829,
-    "Number of Neutral Mentions User Retweeted": 1088
+    "Number of Neutral Mentions User Retweeted": 1088,
+    "Number of Complaints": 4387
   },
   {
     "Accounts": "Fintech5",
@@ -21079,7 +21332,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2031,
     "Number of Negative Mentions User Retweeted": 4697,
     "Number of Neutral Mentions Retweeted": 4852,
-    "Number of Neutral Mentions User Retweeted": 1139
+    "Number of Neutral Mentions User Retweeted": 1139,
+    "Number of Complaints": 5481
   },
   {
     "Accounts": "Fintech5",
@@ -21162,7 +21416,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 2693,
     "Number of Negative Mentions User Retweeted": 4535,
     "Number of Neutral Mentions Retweeted": 1330,
-    "Number of Neutral Mentions User Retweeted": 4157
+    "Number of Neutral Mentions User Retweeted": 4157,
+    "Number of Complaints": 6759
   },
   {
     "Accounts": "Fintech5",
@@ -21245,7 +21500,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4335,
     "Number of Negative Mentions User Retweeted": 4027,
     "Number of Neutral Mentions Retweeted": 1830,
-    "Number of Neutral Mentions User Retweeted": 4558
+    "Number of Neutral Mentions User Retweeted": 4558,
+    "Number of Complaints": 7792
   },
   {
     "Accounts": "Fintech5",
@@ -21328,7 +21584,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1299,
     "Number of Negative Mentions User Retweeted": 4027,
     "Number of Neutral Mentions Retweeted": 4246,
-    "Number of Neutral Mentions User Retweeted": 2774
+    "Number of Neutral Mentions User Retweeted": 2774,
+    "Number of Complaints": 4123
   },
   {
     "Accounts": "Fintech5",
@@ -21411,7 +21668,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1202,
     "Number of Negative Mentions User Retweeted": 1241,
     "Number of Neutral Mentions Retweeted": 4021,
-    "Number of Neutral Mentions User Retweeted": 3999
+    "Number of Neutral Mentions User Retweeted": 3999,
+    "Number of Complaints": 3187
   },
   {
     "Accounts": "Fintech5",
@@ -21494,7 +21752,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 4554,
     "Number of Negative Mentions User Retweeted": 4537,
     "Number of Neutral Mentions Retweeted": 4780,
-    "Number of Neutral Mentions User Retweeted": 3350
+    "Number of Neutral Mentions User Retweeted": 3350,
+    "Number of Complaints": 2426
   },
   {
     "Accounts": "Fintech5",
@@ -21577,7 +21836,8 @@ const jsonData = [
     "Number of Negative Mentions Retweeted": 1141,
     "Number of Negative Mentions User Retweeted": 1964,
     "Number of Neutral Mentions Retweeted": 3074,
-    "Number of Neutral Mentions User Retweeted": 4073
+    "Number of Neutral Mentions User Retweeted": 4073,
+    "Number of Complaints": 6831
   }
 ];
 

@@ -6,15 +6,14 @@ import {
   getPositiveMentionUserData,
   getReTweetsData,
   getTweetCategoryData,
+  getTweetsAnalysis,
   getTweetsData,
 } from "../queries";
 import { Col, Container, Row } from "react-bootstrap";
-import "../assets/style.css";
+import "../assets/index.css";
 import Checkbox from "./Checkbox";
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-import { useNavigate } from "react-router";
+import MenuItem from '@mui/material/MenuItem';
+import Select from '@mui/material/Select';
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -25,53 +24,83 @@ require("highcharts/modules/accessibility")(Highcharts);
 require("highcharts/modules/export-data")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-
 const Chart = () => {
   const [filters, setFilters] = useState([]);
   const [tweetSeries, setTweetSeries] = useState([]);
   const [likeSeries, setLikeSeries] = useState([]);
   const [retweetSeries, setRetweetSeries] = useState([]);
   const [tweetCategirySeries, setTweetCategirySeries] = useState([]);
+  const [tweetAnalysis, setTweetAnalysis] = useState([]);
   const [mentionPositiveUserSeries, setMentionPositiveUserSeries] = useState(
     []
   );
-  const navigate = useNavigate();
+  const [age, setAge] = useState('Account');
+  const [year, setYear] = useState('2019');
+  const [month, setMonth] = useState('month');
+  const [startDate, setStartDate] = useState("startDate");
+  const [endDate, setEndDate] = useState("endDate");
+
+
+  const handleChange = (e) => {
+    setAge(e.target.value);
+    setFilters((prev) => {
+      prev = prev.filter(
+        (el) =>
+          el.includes("Hashtag") ||
+          el.includes("Mentions") ||
+          el.includes("Positive") ||
+          el.includes("Negative") ||
+          el.includes("Neutral/Queries")
+      );
+      return [...prev, e.target.value]
+    });
+  };
+
   const accounts = ["Bank", "Fintech"];
   const sentiments = ["Positive", "Negative", "Neutral/Queries"];
   const categories = ["Hashtag", "Mentions"];
   const banks = ["Bank1", "bank2", "Bank3"];
   const fintechs = ["Fintech4", "Fintech5"];
+  const years = ["2019", "2020", "2021", "2022", "2023"];
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
 
   useEffect(() => {
-    setTweetSeries(getTweetsData(filters, "2019"));
-    setLikeSeries(getLikesData(filters, "2019"));
-    setRetweetSeries(getReTweetsData(filters, "2019"));
-    setTweetCategirySeries(getTweetCategoryData(filters, "2019"));
-    setMentionPositiveUserSeries(getPositiveMentionUserData(filters, "2019"));
-  }, [filters]);
-
-  const [value, setValue] = useState(0);
-
-  const handleChange = (event, newValue) => {
-    console.log("newValue : ", newValue);
-    setValue(newValue);
-    if (newValue == 1) {
-      navigate("/offers");
-    } else if(newValue == 0){
-      navigate("/");
-    }
-  };
+    setTweetSeries(getTweetsData(filters, year, month, startDate, endDate));
+    setLikeSeries(getLikesData(filters, year));
+    setRetweetSeries(getReTweetsData(filters, year));
+    setTweetCategirySeries(getTweetCategoryData(filters, year));
+    setMentionPositiveUserSeries(getPositiveMentionUserData(filters, year));
+    setTweetAnalysis(getTweetsAnalysis(filters, year));
+  }, [filters, year, month, startDate, endDate]);
 
   const tweetChartOptions = {
+    chart: {
+      backgroundColor: 'rgba(192, 192, 192, 0.2)',
+      borderRadius: 10
+    },
     title: {
       text: "Tweets",
       align: "left",
+      style: {
+        color: "#ffffff"
+      }
     },
 
     yAxis: {
@@ -80,7 +109,10 @@ const Chart = () => {
       },
       gridLineWidth: 0,
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
     },
@@ -88,7 +120,10 @@ const Chart = () => {
     xAxis: {
       lineColor: "white",
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       categories: [
@@ -114,6 +149,9 @@ const Chart = () => {
       layout: "vertical",
       align: "right",
       verticalAlign: "middle",
+      itemStyle: {
+        color: '#ffffff',
+      },
     },
 
     plotOptions: {
@@ -144,10 +182,17 @@ const Chart = () => {
     },
   };
 
-  const likesChartOptions = {
+  const tweetAnalysisChartOptions = {
+    chart: {
+      backgroundColor: 'rgba(192, 192, 192, 0.2)',
+      borderRadius: 10
+    },
     title: {
-      text: "Likes",
+      text: "Tweets",
       align: "left",
+      style: {
+        color: "#ffffff"
+      }
     },
 
     yAxis: {
@@ -156,7 +201,10 @@ const Chart = () => {
       },
       gridLineWidth: 0,
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
     },
@@ -164,7 +212,10 @@ const Chart = () => {
     xAxis: {
       lineColor: "white",
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       categories: [
@@ -190,6 +241,101 @@ const Chart = () => {
       layout: "vertical",
       align: "right",
       verticalAlign: "middle",
+      itemStyle: {
+        color: '#ffffff',
+      },
+    },
+
+    plotOptions: {
+      series: {
+        label: {
+          connectorAllowed: false,
+        },
+      },
+    },
+
+    series: tweetAnalysis,
+
+    responsive: {
+      rules: [
+        {
+          condition: {
+            maxWidth: 500,
+          },
+          chartOptions: {
+            legend: {
+              layout: "horizontal",
+              align: "center",
+              verticalAlign: "bottom",
+            },
+          },
+        },
+      ],
+    },
+  };
+
+  const likesChartOptions = {
+    chart: {
+      backgroundColor: 'rgba(192, 192, 192, 0.2)',
+      borderRadius: 10
+    },
+    title: {
+      text: "Likes",
+      align: "left",
+      style: {
+        color: "#ffffff"
+      }
+    },
+
+    yAxis: {
+      title: {
+        text: "",
+      },
+      gridLineWidth: 0,
+      labels: {
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
+      },
+      tickLength: 0,
+    },
+
+    xAxis: {
+      lineColor: "white",
+      labels: {
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
+      },
+      tickLength: 0,
+      categories: [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+      accessibility: {
+        description: "Months of the year",
+      },
+    },
+
+    legend: {
+      layout: "vertical",
+      align: "right",
+      verticalAlign: "middle",
+      itemStyle: {
+        color: '#ffffff',
+      },
     },
 
     plotOptions: {
@@ -221,9 +367,16 @@ const Chart = () => {
   };
 
   const retweetedChartOptions = {
+    chart: {
+      backgroundColor: 'rgba(192, 192, 192, 0.2)',
+      borderRadius: 10
+    },
     title: {
       text: "Retweets",
       align: "left",
+      style: {
+        color: "#ffffff"
+      }
     },
 
     yAxis: {
@@ -231,7 +384,10 @@ const Chart = () => {
         text: "",
       },
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       gridLineWidth: 0,
@@ -239,7 +395,10 @@ const Chart = () => {
 
     xAxis: {
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       lineColor: "white",
@@ -266,6 +425,9 @@ const Chart = () => {
       layout: "vertical",
       align: "right",
       verticalAlign: "middle",
+      itemStyle: {
+        color: '#ffffff',
+      },
     },
 
     plotOptions: {
@@ -299,20 +461,27 @@ const Chart = () => {
   const stackbar = {
     chart: {
       type: "column",
+      backgroundColor: "rgba(192, 192, 192, 0.2)",
+      borderRadius: 10,
     },
 
     title: {
       text: "Tweet Category",
       align: "left",
+      style: {
+        color: "#ffffff"
+      }
     },
 
     credits: {
       enabled: false,
     },
-
     xAxis: {
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       lineColor: "white",
@@ -336,13 +505,19 @@ const Chart = () => {
         text: "",
       },
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       min: 0,
     },
     legend: {
       reversed: true,
+      itemStyle: {
+        color: '#ffffff',
+      },
     },
     plotOptions: {
       series: {
@@ -356,7 +531,12 @@ const Chart = () => {
       },
       bar: {
         colorByPoint: true, // Enable color per point
-        colors: ['green', 'red', 'grey'] // Define custom colors
+        colors: ["green", "red", "grey"], // Define custom colors
+      },
+      column: {
+        dataLabels: {
+          enabled: false, // Disable the data labels
+        }
       }
     },
     series: tweetCategirySeries,
@@ -365,11 +545,16 @@ const Chart = () => {
   const mentionCategoryBar = {
     chart: {
       type: "bar",
+      backgroundColor: "rgba(192, 192, 192, 0.2)",
+      borderRadius: 10,
     },
 
     title: {
       text: "Users",
       align: "left",
+      style: {
+        color: "#ffffff"
+      }
     },
 
     credits: {
@@ -378,7 +563,10 @@ const Chart = () => {
 
     xAxis: {
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       lineColor: "white",
@@ -402,13 +590,19 @@ const Chart = () => {
         text: "",
       },
       labels: {
-        enabled: false,
+        enabled: true,
+        style: {
+          color: "#ffffff"
+        }
       },
       tickLength: 0,
       min: 0,
     },
     legend: {
       reversed: true,
+      itemStyle: {
+        color: '#ffffff',
+      },
     },
     plotOptions: {
       series: {
@@ -420,6 +614,11 @@ const Chart = () => {
         pointWidth: 15,
         pointPadding: 0.2,
       },
+      bar: {
+        dataLabels: {
+          enabled: false, // Disable the data labels
+        }
+      }
     },
     series: mentionPositiveUserSeries,
   };
@@ -428,33 +627,10 @@ const Chart = () => {
     <>
       <Container fluid>
         <Row>
-          <Col md={2}>
-            <Box sx={{ width: "100%" }}>
-              <Box
-                sx={{ borderBottom: 1, borderColor: "divider" }}
-                justifyContent="center"
-                alignItems="center"
-                display="flex"
-              >
-                <Tabs
-                  value={value}
-                  onChange={handleChange}
-                  aria-label="basic tabs example"
-                >
-                  <Tab label="Tweets" {...a11yProps(0)} />
-                  <Tab label="Offers" {...a11yProps(1)} />
-                </Tabs>
-              </Box>
-            </Box>
+          <Col md={2} className="categories-list">
             <Checkbox
               data={accounts}
               title={"Classes"}
-              filters={filters}
-              setFilters={setFilters}
-            />
-            <Checkbox
-              data={[...banks, ...fintechs]}
-              title={"Accounts"}
               filters={filters}
               setFilters={setFilters}
             />
@@ -470,13 +646,73 @@ const Chart = () => {
               filters={filters}
               setFilters={setFilters}
             />
+            <h1 className="type-title">Accounts</h1>
+            <Select
+              value={age}
+              onChange={handleChange}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {["Account", ...banks, ...fintechs].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
+            <h1 className="type-title">Year</h1>
+            <Select
+              value={year}
+              onChange={e => setYear(e.target.value)}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {[...years].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
+            <h1 className="type-title">Month</h1>
+            <Select
+              value={month}
+              onChange={e => setMonth(e.target.value)}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {["month", ...months].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
+            <h1 className="type-title">Start Date</h1>
+            <Select
+              value={startDate}
+              onChange={e => setStartDate(e.target.value)}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              disabled={month === "month"}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {["startDate", ...dates].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
+            <h1 className="type-title">End Date</h1>
+            <Select
+              value={endDate}
+              onChange={e => setEndDate(e.target.value)}
+              displayEmpty
+              inputProps={{ "aria-label": "Without label" }}
+              disabled={month === "month"}
+              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+            >
+              {["endDate", ...dates].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+            </Select>
           </Col>
           <Col md={10} className="chart-block">
             <div className="title-head">
               <h1>Tweets</h1>
             </div>
             <Row>
-              <Col md={3} className="chart-column">
+              <Col md={4} className="chart-column">
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  constructorType={"chart"}
+                  options={tweetAnalysisChartOptions}
+                  updateArgs={[true, true, true]}
+                />
+              </Col>
+              <Col md={4} className="chart-column">
                 <HighchartsReact
                   highcharts={Highcharts}
                   constructorType={"chart"}
@@ -484,7 +720,7 @@ const Chart = () => {
                   updateArgs={[true, true, true]}
                 />
               </Col>
-              <Col md={3} className="chart-column">
+              <Col md={4} className="chart-column">
                 <HighchartsReact
                   highcharts={Highcharts}
                   constructorType={"chart"}
@@ -492,7 +728,7 @@ const Chart = () => {
                   updateArgs={[true, true, true]}
                 />
               </Col>
-              <Col md={3} className="chart-column">
+              <Col md={4} className="chart-column">
                 <HighchartsReact
                   highcharts={Highcharts}
                   constructorType={"chart"}
@@ -500,7 +736,7 @@ const Chart = () => {
                   updateArgs={[true, true, true]}
                 />
               </Col>
-              <Col md={3} className="chart-column">
+              <Col md={4} className="chart-column">
                 <HighchartsReact
                   highcharts={Highcharts}
                   constructorType={"chart"}
@@ -508,7 +744,7 @@ const Chart = () => {
                   updateArgs={[true, true, true]}
                 />
               </Col>
-              <Col md={12} className="chart-column">
+              <Col md={4} className="chart-column">
                 <HighchartsReact
                   highcharts={Highcharts}
                   constructorType={"chart"}
