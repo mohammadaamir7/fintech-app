@@ -9,11 +9,12 @@ import {
   getTweetsAnalysis,
   getTweetsData,
 } from "../queries";
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import "../assets/index.css";
 import Checkbox from "./Checkbox";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
+import FormControl from '@mui/material/FormControl';
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -25,37 +26,6 @@ require("highcharts/modules/export-data")(Highcharts);
 require("highcharts/modules/map")(Highcharts);
 
 const Chart = () => {
-  const [filters, setFilters] = useState([]);
-  const [tweetSeries, setTweetSeries] = useState([]);
-  const [likeSeries, setLikeSeries] = useState([]);
-  const [retweetSeries, setRetweetSeries] = useState([]);
-  const [tweetCategirySeries, setTweetCategirySeries] = useState([]);
-  const [tweetAnalysis, setTweetAnalysis] = useState([]);
-  const [mentionPositiveUserSeries, setMentionPositiveUserSeries] = useState(
-    []
-  );
-  const [age, setAge] = useState('Account');
-  const [year, setYear] = useState('2019');
-  const [month, setMonth] = useState('month');
-  const [startDate, setStartDate] = useState("startDate");
-  const [endDate, setEndDate] = useState("endDate");
-
-
-  const handleChange = (e) => {
-    setAge(e.target.value);
-    setFilters((prev) => {
-      prev = prev.filter(
-        (el) =>
-          el.includes("Hashtag") ||
-          el.includes("Mentions") ||
-          el.includes("Positive") ||
-          el.includes("Negative") ||
-          el.includes("Neutral/Queries")
-      );
-      return [...prev, e.target.value]
-    });
-  };
-
   const accounts = ["Bank", "Fintech"];
   const sentiments = ["Positive", "Negative", "Neutral/Queries"];
   const categories = ["Hashtag", "Mentions"];
@@ -81,14 +51,84 @@ const Chart = () => {
     "Dec",
   ];
 
+  const itemsPerPage = 12; // Number of days to display per page
+
+  const [filters, setFilters] = useState([]);
+  const [tweetSeries, setTweetSeries] = useState([]);
+  const [likeSeries, setLikeSeries] = useState([]);
+  const [retweetSeries, setRetweetSeries] = useState([]);
+  const [tweetCategirySeries, setTweetCategirySeries] = useState([]);
+  const [tweetAnalysis, setTweetAnalysis] = useState([]);
+  const [mentionPositiveUserSeries, setMentionPositiveUserSeries] = useState(
+    []
+  );
+  const [age, setAge] = useState('Account');
+  const [year, setYear] = useState('2019');
+  const [month, setMonth] = useState('month');
+  const [startDate, setStartDate] = useState(1);
+  const [endDate, setEndDate] = useState(30);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const totalPages = Math.ceil((endDate - startDate + 1) / itemsPerPage);
+
+  const handlePrevious = () => {
+    setCurrentPage((prevPage) => Math.max(prevPage - 1, 0));
+  };
+
+  const handleNext = () => {
+    setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
+  };
+
+
+  const modifyData = (data) => {
+    for (let index = 0; index < data.length; index++) {
+      if(data[index] == 0){
+        data[index] = null;
+      } 
+    }
+
+    return data
+  }
+
+  const sliceData = (data) => {
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const subsetData = []
+
+    for (let index = 0; index < data.length; index++) {
+      subsetData.push({
+        name: data[index].name,
+        data: modifyData(data[index].data.slice(startIndex, endIndex)),
+        color: data[index].color
+      });
+    }
+
+    return subsetData
+  } 
+
+  const handleChange = (e) => {
+    setAge(e.target.value);
+    setFilters((prev) => {
+      prev = prev.filter(
+        (el) =>
+          el.includes("Hashtag") ||
+          el.includes("Mentions") ||
+          el.includes("Positive") ||
+          el.includes("Negative") ||
+          el.includes("Neutral/Queries")
+      );
+      return [...prev, e.target.value]
+    });
+  };
+
   useEffect(() => {
-    setTweetSeries(getTweetsData(filters, year, month, startDate, endDate));
-    setLikeSeries(getLikesData(filters, year));
-    setRetweetSeries(getReTweetsData(filters, year));
-    setTweetCategirySeries(getTweetCategoryData(filters, year));
-    setMentionPositiveUserSeries(getPositiveMentionUserData(filters, year));
-    setTweetAnalysis(getTweetsAnalysis(filters, year));
-  }, [filters, year, month, startDate, endDate]);
+    setTweetSeries(sliceData(getTweetsData(filters, year, month, startDate, endDate)));
+    setLikeSeries(sliceData(getLikesData(filters, year, month, startDate, endDate)));
+    setRetweetSeries(sliceData(getReTweetsData(filters, year, month, startDate, endDate)));
+    setTweetCategirySeries(sliceData(getTweetCategoryData(filters, year, month, startDate, endDate)));
+    setMentionPositiveUserSeries(sliceData(getPositiveMentionUserData(filters, year, month, startDate, endDate)));
+    setTweetAnalysis(sliceData(getTweetsAnalysis(filters, year, month, startDate, endDate)));
+  }, [filters, year, month, startDate, endDate, currentPage]);
 
   const tweetChartOptions = {
     chart: {
@@ -126,20 +166,7 @@ const Chart = () => {
         }
       },
       tickLength: 0,
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
       accessibility: {
         description: "Months of the year",
       },
@@ -218,20 +245,7 @@ const Chart = () => {
         }
       },
       tickLength: 0,
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
       accessibility: {
         description: "Months of the year",
       },
@@ -310,20 +324,7 @@ const Chart = () => {
         }
       },
       tickLength: 0,
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
       accessibility: {
         description: "Months of the year",
       },
@@ -402,20 +403,7 @@ const Chart = () => {
       },
       tickLength: 0,
       lineColor: "white",
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
       accessibility: {
         description: "Months of the year",
       },
@@ -485,20 +473,7 @@ const Chart = () => {
       },
       tickLength: 0,
       lineColor: "white",
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
     },
     yAxis: {
       title: {
@@ -570,20 +545,7 @@ const Chart = () => {
       },
       tickLength: 0,
       lineColor: "white",
-      categories: [
-        "Jan",
-        "Feb",
-        "Mar",
-        "Apr",
-        "May",
-        "Jun",
-        "Jul",
-        "Aug",
-        "Sep",
-        "Oct",
-        "Nov",
-        "Dec",
-      ],
+      categories: month !== "month" ? dates : months,
     },
     yAxis: {
       title: {
@@ -652,51 +614,86 @@ const Chart = () => {
               onChange={handleChange}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
             >
-              {["Account", ...banks, ...fintechs].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+              {["Account", ...banks, ...fintechs].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
             </Select>
             <h1 className="type-title">Year</h1>
             <Select
               value={year}
-              onChange={e => setYear(e.target.value)}
+              onChange={(e) => setYear(e.target.value)}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
             >
-              {[...years].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+              {[...years].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
             </Select>
             <h1 className="type-title">Month</h1>
             <Select
               value={month}
-              onChange={e => setMonth(e.target.value)}
+              onChange={(e) => setMonth(e.target.value)}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
-              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
             >
-              {["month", ...months].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+              {["month", ...months].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
             </Select>
             <h1 className="type-title">Start Date</h1>
             <Select
               value={startDate}
-              onChange={e => setStartDate(e.target.value)}
+              onChange={(e) => setStartDate(e.target.value)}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
               disabled={month === "month"}
-              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
             >
-              {["startDate", ...dates].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+              {["startDate", ...dates].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
             </Select>
             <h1 className="type-title">End Date</h1>
             <Select
               value={endDate}
-              onChange={e => setEndDate(e.target.value)}
+              onChange={(e) => setEndDate(e.target.value)}
               displayEmpty
               inputProps={{ "aria-label": "Without label" }}
               disabled={month === "month"}
-              sx={{ m: 1, minWidth: 200, color: "#ffffff", border: "1px solid #ffffff" }}
+              sx={{
+                m: 1,
+                minWidth: 200,
+                color: "#ffffff",
+                border: "1px solid #ffffff",
+              }}
             >
-              {["endDate", ...dates].map((account) => <MenuItem value={account}>{account}</MenuItem>)}
+              {["endDate", ...dates].map((account) => (
+                <MenuItem value={account}>{account}</MenuItem>
+              ))}
             </Select>
           </Col>
           <Col md={10} className="chart-block">
@@ -753,6 +750,20 @@ const Chart = () => {
                 />
               </Col>
             </Row>
+            <Button
+              onClick={handlePrevious}
+              disabled={currentPage === 0 || month === "month"}
+              className="pagination-btn"
+            >
+              Previous
+            </Button>
+            <Button
+              onClick={handleNext}
+              disabled={currentPage === totalPages - 1 || month === "month"}
+              className="pagination-btn"
+            >
+              Next
+            </Button>
           </Col>
         </Row>
       </Container>

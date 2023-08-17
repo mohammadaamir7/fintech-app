@@ -111,11 +111,6 @@ export const getAccountData = (accountName, year) => {
 };
 
 export const getTweetsData = (accountNames, year, month, startDate, endDate) => {
-  console.log("account names : ", accountNames);
-  console.log("month : ", month);
-  console.log("startDate : ", startDate);
-  console.log("endDate : ", endDate);
-
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -151,16 +146,7 @@ export const getTweetsData = (accountNames, year, month, startDate, endDate) => 
 
   const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (month !== "month" && !startDate === "startDate") {
-        console.log('first if')
-        if (
-          record.Accounts === accountNames[index] &&
-          record["Years (Date)"] === year &&
-          record["Months (Date)"] === month
-        ) {
-          return true;
-        }
-      } else if (month !== "month" && startDate !== "startDate") {
+     if (month !== "month" && startDate !== "startDate") {
         console.log('second if')
         if (
           record.Accounts === accountNames[index] &&
@@ -192,9 +178,9 @@ export const getTweetsData = (accountNames, year, month, startDate, endDate) => 
     timePeriodAttribute = "Months (Date)"
   }
 
-  for (let index = 0; index < categories.length; index++) {
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Hashtag") &&
@@ -596,12 +582,14 @@ export const getTweetsData = (accountNames, year, month, startDate, endDate) => 
   return series;
 };
 
-export const getTweetsAnalysis = (accountNames, year) => {
+export const getTweetsAnalysis = (accountNames, year, month, startDate, endDate) => {
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
   const series = [];
   const tweets = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -618,21 +606,50 @@ export const getTweetsAnalysis = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+     if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
 
-  for (let index = 0; index < categories.length; index++) {
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
+
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Positive") &&
@@ -702,7 +719,7 @@ export const getTweetsAnalysis = (accountNames, year) => {
   return series;
 };
 
-export const getLikesData = (accountNames, year) => {
+export const getLikesData = (accountNames, year, month, startDate, endDate) => {
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -710,6 +727,8 @@ export const getLikesData = (accountNames, year) => {
 
   const likedPosts = [];
   const likedUsers = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -726,21 +745,50 @@ export const getLikesData = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+     if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
 
-  for (let index = 0; index < categories.length; index++) {
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
+
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Hashtag") &&
@@ -1176,7 +1224,7 @@ export const getLikesData = (accountNames, year) => {
   return series;
 };
 
-export const getReTweetsData = (accountNames, year) => {
+export const getReTweetsData = (accountNames, year, month, startDate, endDate) => {
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -1184,6 +1232,8 @@ export const getReTweetsData = (accountNames, year) => {
 
   const retweetedTweets = [];
   const retweetedUsers = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -1200,24 +1250,68 @@ export const getReTweetsData = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     if (accountNames.length == 0) {
       accountNames = ["Bank1", "bank2", "Bank3", "Fintech4", "Fintech5"];
     }
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+     if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
 
-  for (let index = 0; index < categories.length; index++) {
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
+
+  // const accountData = data.filter((record) => {
+  //   if (accountNames.length == 0) {
+  //     accountNames = ["Bank1", "bank2", "Bank3", "Fintech4", "Fintech5"];
+  //   }
+  //   for (let index = 0; index < accountNames.length; index++) {
+  //     if (
+  //       record.Accounts === accountNames[index] &&
+  //       record["Years (Date)"] === year
+  //     ) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // });
+
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Hashtag") &&
@@ -1766,7 +1860,7 @@ export const getReTweetsData = (accountNames, year) => {
   return series;
 };
 
-export const getTweetCategoryData = (accountNames, year) => {
+export const getTweetCategoryData = (accountNames, year, month, startDate, endDate) => {
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -1775,6 +1869,8 @@ export const getTweetCategoryData = (accountNames, year) => {
   const positiveTweets = [];
   const negativeTweets = [];
   const queryTweets = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -1791,21 +1887,62 @@ export const getTweetCategoryData = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+  const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+     if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
 
-  for (let index = 0; index < categories.length; index++) {
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
+
+  // const accountData = data.filter((record) => {
+  //   for (let index = 0; index < accountNames.length; index++) {
+  //     if (
+  //       record.Accounts === accountNames[index] &&
+  //       record["Years (Date)"] === year
+  //     ) {
+  //       return true;
+  //     }
+  //   }
+  //   return false;
+  // });
+
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Hashtag") &&
@@ -1939,7 +2076,7 @@ export const getMentionTweetCategoryData = (accountName, year) => {
   return series;
 };
 
-export const getPositiveMentionUserData = (accountNames, year) => {
+export const getPositiveMentionUserData = (accountNames, year, month, startDate, endDate) => {
   const initialValue = [...accountNames];
   accountNames = structureAccounts(accountNames);
 
@@ -1948,6 +2085,8 @@ export const getPositiveMentionUserData = (accountNames, year) => {
   const positiveTweets = [];
   const negativeTweets = [];
   const queryTweets = [];
+  let timePeriodIterator = []
+  let timePeriodAttribute = ""
 
   const categories = [
     "Jan",
@@ -1964,21 +2103,50 @@ export const getPositiveMentionUserData = (accountNames, year) => {
     "Dec",
   ];
 
-  const accountData = data.filter((record) => {
+const dates = [
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
+    22, 23, 24, 25, 26, 27, 28, 29, 30,
+  ];
+
+  const requiredData = month !== "month" ? monthlyData : data
+
+  const accountData = requiredData.filter((record) => {
     for (let index = 0; index < accountNames.length; index++) {
-      if (
-        record.Accounts === accountNames[index] &&
-        record["Years (Date)"] === year
-      ) {
-        return true;
+     if (month !== "month" && startDate !== "startDate") {
+        console.log('second if')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year &&
+          record["Months (Date)"] === month &&
+          (record["Date"] >= startDate && record["Date"] <= endDate)
+        ) {
+          return true;
+        }
+      } else {
+        console.log('else')
+        if (
+          record.Accounts === accountNames[index] &&
+          record["Years (Date)"] === year
+        ) {
+          return true;
+        }
       }
     }
+
     return false;
   });
 
-  for (let index = 0; index < categories.length; index++) {
+  if(month !== "month"){
+    timePeriodIterator = dates
+    timePeriodAttribute = "Date"
+  }else{
+    timePeriodIterator = categories
+    timePeriodAttribute = "Months (Date)"
+  }
+
+  for (let index = 0; index < timePeriodIterator.length; index++) {
     const filteredData = accountData.filter(
-      (record) => record["Months (Date)"] === categories[index]
+      (record) => record[timePeriodAttribute] === timePeriodIterator[index]
     );
     if (
       initialValue.includes("Hashtag") &&

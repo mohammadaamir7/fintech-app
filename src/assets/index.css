@@ -94,18 +94,26 @@
 }
 
 .categories-list {
-  background-color: #29453e;
+  background-color: #293245;
 }
 
 .nav-style {
   opacity: 1;
-  background-color: #000000 !important;
+  background-color: #29453e !important;
 }
 
 .navbar-tabs {
-  color: #ebe53f !important;
+  color: #fff !important;
   font-weight: bold;
   font-family: Play;
   font-size: 20px !important;
   margin: 0 10px;
+}
+
+.pagination-btn {
+  width: 100px;
+}
+
+.pagination-btn:last-child {
+  margin-left: 5px;
 }
