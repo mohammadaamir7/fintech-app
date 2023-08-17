@@ -117,3 +117,47 @@
 .pagination-btn:last-child {
   margin-left: 5px;
 }
+
+.drawer-div {
+  display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1500px) {
+  .para-margin{
+    background-color: #293245;
+    font-size: 20px;
+  }
+  .accordian-header {
+    background-color: #293245 !important;
+  }
+  .accordian-body {
+    background-color: #293245;
+  }
+  .white-icon {
+    color: white !important
+  }
+  
+  .accordian-margin {
+    margin-top: 60px;
+  }
+  
+  .drawer {
+    width: 350px !important
+  }
+  
+  .drawer-div {
+    display: block;
+    margin-top: 60px;
+  }
+
+  .categories-list-small {
+    background-color: #293245;
+  }
+  .categories-list{
+    display: none;
+  }
+
+  .checkbox-margin {
+    
+  }
+}

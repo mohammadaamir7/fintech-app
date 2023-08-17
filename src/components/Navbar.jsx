@@ -9,8 +9,8 @@ const NavbarComponent = () => {
     <Navbar collapseOnSelect expand="md" fixed="top" className="nav-style">
       <Container fluid>
         <Navbar.Brand style={{cursor: "pointer"}} onClick={() => navigate("/")} className='navbar-tabs'>Fintech App</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
+        <Navbar.Collapse id="responsive-navbar-nav" className="white-icon">
           <Nav className="justify-content-end flex-grow-1">
             <Nav.Link onClick={() => navigate("/Offers")} className='navbar-tabs'>Offers</Nav.Link>
             <Nav.Link onClick={() => navigate("/complaints-analysis")} className='navbar-tabs'>Complaint Analysis</Nav.Link>

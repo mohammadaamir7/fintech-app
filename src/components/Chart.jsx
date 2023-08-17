@@ -9,12 +9,22 @@ import {
   getTweetsAnalysis,
   getTweetsData,
 } from "../queries";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Accordion, Button, Col, Container, Row } from "react-bootstrap";
 import "../assets/index.css";
 import Checkbox from "./Checkbox";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import FormControl from '@mui/material/FormControl';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+// import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -51,7 +61,7 @@ const Chart = () => {
     "Dec",
   ];
 
-  const itemsPerPage = 12; // Number of days to display per page
+  const itemsPerPage = 12;
 
   const [filters, setFilters] = useState([]);
   const [tweetSeries, setTweetSeries] = useState([]);
@@ -68,6 +78,56 @@ const Chart = () => {
   const [startDate, setStartDate] = useState(1);
   const [endDate, setEndDate] = useState(30);
   const [currentPage, setCurrentPage] = useState(0);
+
+  const [state, setState] = React.useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   const totalPages = Math.ceil((endDate - startDate + 1) / itemsPerPage);
 
@@ -588,6 +648,157 @@ const Chart = () => {
   return (
     <>
       <Container fluid>
+        <Row>
+          <Col>
+            <div className="drawer-div">
+              {["left"].map((anchor) => (
+                <React.Fragment key={anchor}>
+                  <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                  <Drawer
+                    anchor={anchor}
+                    open={state[anchor]}
+                    onClose={toggleDrawer(anchor, false)}
+                    sx={{
+                      width: "350px",
+                    }}
+                  >
+                    <div className="categories-list-small drawer">
+                      <Accordion>
+                        <Accordion.Item eventKey="0">
+                          <Accordion.Header className="accordian-header">
+                            Classes
+                          </Accordion.Header>
+                          <Accordion.Body className="accordian-body">
+                            <Checkbox
+                              data={accounts}
+                              title={""}
+                              filters={filters}
+                              setFilters={setFilters}
+                            />
+                          </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="1">
+                          <Accordion.Header className="accordian-header">
+                            Categories
+                          </Accordion.Header>
+                          <Accordion.Body className="accordian-body">
+                            <Checkbox
+                              data={categories}
+                              title={""}
+                              filters={filters}
+                              setFilters={setFilters}
+                            />
+                          </Accordion.Body>
+                        </Accordion.Item>
+                        <Accordion.Item eventKey="2">
+                          <Accordion.Header className="accordian-header">
+                            Sentiments
+                          </Accordion.Header>
+                          <Accordion.Body className="accordian-body">
+                            <Checkbox
+                              data={sentiments}
+                              title={""}
+                              filters={filters}
+                              setFilters={setFilters}
+                            />
+                          </Accordion.Body>
+                        </Accordion.Item>
+                      </Accordion>
+
+                      <h1 className="type-title">Accounts</h1>
+                      <Select
+                        value={age}
+                        onChange={handleChange}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
+                        sx={{
+                          m: 1,
+                          minWidth: 200,
+                          color: "#ffffff",
+                          border: "1px solid #ffffff",
+                        }}
+                      >
+                        {["Account", ...banks, ...fintechs].map((account) => (
+                          <MenuItem value={account}>{account}</MenuItem>
+                        ))}
+                      </Select>
+                      <h1 className="type-title">Year</h1>
+                      <Select
+                        value={year}
+                        onChange={(e) => setYear(e.target.value)}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
+                        sx={{
+                          m: 1,
+                          minWidth: 200,
+                          color: "#ffffff",
+                          border: "1px solid #ffffff",
+                        }}
+                      >
+                        {[...years].map((account) => (
+                          <MenuItem value={account}>{account}</MenuItem>
+                        ))}
+                      </Select>
+                      <h1 className="type-title">Month</h1>
+                      <Select
+                        value={month}
+                        onChange={(e) => setMonth(e.target.value)}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
+                        sx={{
+                          m: 1,
+                          minWidth: 200,
+                          color: "#ffffff",
+                          border: "1px solid #ffffff",
+                        }}
+                      >
+                        {["month", ...months].map((account) => (
+                          <MenuItem value={account}>{account}</MenuItem>
+                        ))}
+                      </Select>
+                      <h1 className="type-title">Start Date</h1>
+                      <Select
+                        value={startDate}
+                        onChange={(e) => setStartDate(e.target.value)}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
+                        disabled={month === "month"}
+                        sx={{
+                          m: 1,
+                          minWidth: 200,
+                          color: "#ffffff",
+                          border: "1px solid #ffffff",
+                        }}
+                      >
+                        {["startDate", ...dates].map((account) => (
+                          <MenuItem value={account}>{account}</MenuItem>
+                        ))}
+                      </Select>
+                      <h1 className="type-title">End Date</h1>
+                      <Select
+                        value={endDate}
+                        onChange={(e) => setEndDate(e.target.value)}
+                        displayEmpty
+                        inputProps={{ "aria-label": "Without label" }}
+                        disabled={month === "month"}
+                        sx={{
+                          m: 1,
+                          minWidth: 200,
+                          color: "#ffffff",
+                          border: "1px solid #ffffff",
+                        }}
+                      >
+                        {["endDate", ...dates].map((account) => (
+                          <MenuItem value={account}>{account}</MenuItem>
+                        ))}
+                      </Select>
+                    </div>
+                  </Drawer>
+                </React.Fragment>
+              ))}
+            </div>
+          </Col>
+        </Row>
         <Row>
           <Col md={2} className="categories-list">
             <Checkbox
