@@ -9,22 +9,18 @@ import {
   getTweetsAnalysis,
   getTweetsData,
 } from "../queries";
-import { Accordion, Button, Col, Container, Row } from "react-bootstrap";
+import {  Button, Col, Container, Row } from "react-bootstrap";
 import "../assets/index.css";
 import Checkbox from "./Checkbox";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
-// import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TuneIcon from '@mui/icons-material/Tune';
 
 require("highcharts/indicators/indicators")(Highcharts);
 require("highcharts/indicators/pivot-points")(Highcharts);
@@ -94,40 +90,6 @@ const Chart = () => {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = (anchor) => (
-    <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   const totalPages = Math.ceil((endDate - startDate + 1) / itemsPerPage);
 
@@ -648,12 +610,18 @@ const Chart = () => {
   return (
     <>
       <Container fluid>
-        <Row>
+        <Row className="menu-back">
           <Col>
             <div className="drawer-div">
               {["left"].map((anchor) => (
                 <React.Fragment key={anchor}>
-                  <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                  <Button
+                    className="filter-btn"
+                    onClick={toggleDrawer(anchor, true)}
+                  >
+                    <TuneIcon />
+                  </Button>
+                  <span className="filter-span">Filters</span>
                   <Drawer
                     anchor={anchor}
                     open={state[anchor]}
@@ -662,49 +630,73 @@ const Chart = () => {
                       width: "350px",
                     }}
                   >
-                    <div className="categories-list-small drawer">
-                      <Accordion>
-                        <Accordion.Item eventKey="0">
-                          <Accordion.Header className="accordian-header">
+                    <div className="categories-list-small extra-length-drawer">
+                      <Accordion className="accordian-size">
+                        <AccordionSummary
+                          className="accordian-header"
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <Typography className="accordian-title">
                             Classes
-                          </Accordion.Header>
-                          <Accordion.Body className="accordian-body">
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails className="accordian-body">
+                          <div className="checkbox-small">
                             <Checkbox
                               data={accounts}
                               title={""}
                               filters={filters}
                               setFilters={setFilters}
                             />
-                          </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="1">
-                          <Accordion.Header className="accordian-header">
+                          </div>
+                        </AccordionDetails>
+                      </Accordion>
+                      <Accordion>
+                        <AccordionSummary
+                          className="accordian-header"
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <Typography className="accordian-title">
                             Categories
-                          </Accordion.Header>
-                          <Accordion.Body className="accordian-body">
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails className="accordian-body">
+                          <div className="checkbox-small">
                             <Checkbox
                               data={categories}
                               title={""}
                               filters={filters}
                               setFilters={setFilters}
                             />
-                          </Accordion.Body>
-                        </Accordion.Item>
-                        <Accordion.Item eventKey="2">
-                          <Accordion.Header className="accordian-header">
+                          </div>
+                        </AccordionDetails>
+                      </Accordion>
+                      <Accordion>
+                        <AccordionSummary
+                          className="accordian-header"
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
+                        >
+                          <Typography className="accordian-title">
                             Sentiments
-                          </Accordion.Header>
-                          <Accordion.Body className="accordian-body">
+                          </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails className="accordian-body">
+                          <div className="checkbox-small">
                             <Checkbox
                               data={sentiments}
                               title={""}
                               filters={filters}
                               setFilters={setFilters}
                             />
-                          </Accordion.Body>
-                        </Accordion.Item>
+                          </div>
+                        </AccordionDetails>
                       </Accordion>
-
                       <h1 className="type-title">Accounts</h1>
                       <Select
                         value={age}
@@ -713,7 +705,7 @@ const Chart = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         sx={{
                           m: 1,
-                          minWidth: 200,
+                          minWidth: 150,
                           color: "#ffffff",
                           border: "1px solid #ffffff",
                         }}
@@ -730,7 +722,7 @@ const Chart = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         sx={{
                           m: 1,
-                          minWidth: 200,
+                          minWidth: 150,
                           color: "#ffffff",
                           border: "1px solid #ffffff",
                         }}
@@ -747,7 +739,7 @@ const Chart = () => {
                         inputProps={{ "aria-label": "Without label" }}
                         sx={{
                           m: 1,
-                          minWidth: 200,
+                          minWidth: 150,
                           color: "#ffffff",
                           border: "1px solid #ffffff",
                         }}
@@ -765,7 +757,7 @@ const Chart = () => {
                         disabled={month === "month"}
                         sx={{
                           m: 1,
-                          minWidth: 200,
+                          minWidth: 150,
                           color: "#ffffff",
                           border: "1px solid #ffffff",
                         }}
@@ -783,9 +775,10 @@ const Chart = () => {
                         disabled={month === "month"}
                         sx={{
                           m: 1,
-                          minWidth: 200,
+                          minWidth: 150,
                           color: "#ffffff",
                           border: "1px solid #ffffff",
+                          marginBottom: "50px",
                         }}
                       >
                         {["endDate", ...dates].map((account) => (
@@ -827,7 +820,7 @@ const Chart = () => {
               inputProps={{ "aria-label": "Without label" }}
               sx={{
                 m: 1,
-                minWidth: 200,
+                minWidth: 150,
                 color: "#ffffff",
                 border: "1px solid #ffffff",
               }}
@@ -844,7 +837,7 @@ const Chart = () => {
               inputProps={{ "aria-label": "Without label" }}
               sx={{
                 m: 1,
-                minWidth: 200,
+                minWidth: 150,
                 color: "#ffffff",
                 border: "1px solid #ffffff",
               }}
@@ -861,7 +854,7 @@ const Chart = () => {
               inputProps={{ "aria-label": "Without label" }}
               sx={{
                 m: 1,
-                minWidth: 200,
+                minWidth: 150,
                 color: "#ffffff",
                 border: "1px solid #ffffff",
               }}
@@ -879,7 +872,7 @@ const Chart = () => {
               disabled={month === "month"}
               sx={{
                 m: 1,
-                minWidth: 200,
+                minWidth: 150,
                 color: "#ffffff",
                 border: "1px solid #ffffff",
               }}
@@ -897,7 +890,7 @@ const Chart = () => {
               disabled={month === "month"}
               sx={{
                 m: 1,
-                minWidth: 200,
+                minWidth: 150,
                 color: "#ffffff",
                 border: "1px solid #ffffff",
               }}
@@ -908,7 +901,7 @@ const Chart = () => {
             </Select>
           </Col>
           <Col md={10} className="chart-block">
-            <div className="title-head">
+            <div className="title-head sx-margin">
               <h1>Tweets</h1>
             </div>
             <Row>

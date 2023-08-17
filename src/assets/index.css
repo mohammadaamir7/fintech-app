@@ -82,7 +82,7 @@
   background-color: rgba(192, 192, 192, 0.2);
   margin: 70px -5px 0;
   height: auto;
-  width: 81.5vw;
+  /* width: 81.5vw; */
 }
 
 .title-head h1 {
@@ -123,12 +123,18 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 1500px) {
-  .para-margin{
+  .para-margin {
     background-color: #293245;
-    font-size: 20px;
+    font-size: 15px;
   }
   .accordian-header {
     background-color: #293245 !important;
+  }
+  .accordian-title {
+    color: #fff;
+    font-family: Poppins !important;
+    font-size: 20px !important;
+    margin: 10px 0 !important;
   }
   .accordian-body {
     background-color: #293245;
@@ -142,22 +148,47 @@
   }
   
   .drawer {
-    width: 350px !important
+    width: 350px !important;
+    height: 100%;
   }
-  
+  .extra-length-drawer{
+    width: 350px !important;
+  }
   .drawer-div {
     display: block;
-    margin-top: 60px;
+    margin-top: 70px;
+  }
+
+  .menu-back {
+    background-color: #0d4e5e;
   }
 
   .categories-list-small {
     background-color: #293245;
   }
-  .categories-list{
+  .categories-list {
     display: none;
   }
 
-  .checkbox-margin {
-    
+  .checkbox-small {
+    margin-top: -100px !important;
+    margin-left: -30px !important;
+  }
+  .type-title {
+    font-size: 22px;
+  }
+  .filter-btn {
+    background-color: #0d4e5e !important;
+    border: 1px solid #0d4e5e !important;
+    margin-top: -10px;
+    margin-left: -12px;
+  }
+  .sx-margin {
+    margin-top: -2px;
+  }
+  .filter-span {
+    color: #fff;
+    font-family: Poppins !important;
+    font-size: 20px !important;
   }
 }
